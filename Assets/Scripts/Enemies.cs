@@ -7,6 +7,9 @@ public class Enemies : MonoBehaviour
 
     private Vector3 targetPlace;
 
+    private int currWayP;
+
+
     private void Awake()
     {
         currpathway = GameObject.Find("Pathway").GetComponent<Pathway>();
@@ -15,12 +18,28 @@ public class Enemies : MonoBehaviour
 
     private void OnEnable()
     {
-        targetPlace = currpathway.GetPos(2);
+        currWayP = 0;
+        targetPlace = currpathway.GetPos(currWayP);
     }
 
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPlace, speed * Time.deltaTime);
+
+        float roughlength = (transform.position - targetPlace).magnitude;
+        if (roughlength < 0.1f )
+        {
+            if(currWayP < currpathway.WayP.Length - 1)
+            {
+                currWayP++;
+                targetPlace = currpathway.GetPos(currWayP);
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
+
+        }
     }
 
 
