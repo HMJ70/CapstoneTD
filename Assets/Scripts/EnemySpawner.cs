@@ -1,10 +1,14 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public static event Action<int> OnWchanged;
+
     [SerializeField] private WData[] waves;
 
+    private int CountW = 0;
     private int currwaveindex = 0;
     private WData currwave => waves[currwaveindex];
 
@@ -18,6 +22,11 @@ public class EnemySpawner : MonoBehaviour
 
     private Dictionary<EType, ObjPool> poolDict;
 
+    private float WDelay = 2f;
+    private float WCooldown;
+    private bool isbetweenW = false;
+
+
     private void Awake()
     {
         poolDict = new Dictionary<EType, ObjPool>()
@@ -28,19 +37,50 @@ public class EnemySpawner : MonoBehaviour
         };
     }
 
+    private void OnEnable()
+    {
+        Enemies.OnReachingBase += EReachingBase;
+    }
+
+    private void OnDisable()
+    {
+        Enemies.OnReachingBase -= EReachingBase;
+    }
+
+    private void Start()
+    {
+        OnWchanged?.Invoke(CountW);
+    }
     void Update()
     {
-        STime -= Time.deltaTime;
-        if (STime <= 0 && SCounter < currwave.EperWave)
+        if(isbetweenW)
         {
-            STime = currwave.Sinterval;
-            SpawnE();
-            SCounter++;
+            WCooldown -= Time.deltaTime;
+            if(WCooldown <= 0f )
+            {
+                currwaveindex = (currwaveindex + 1) % waves.Length;
+                CountW++;
+                OnWchanged?.Invoke(CountW);
+                SCounter = 0;
+                ERemoved = 0;
+                STime = currwave.Sinterval;// can be set to zero =0f; for instant
+                isbetweenW = false;
+            }
         }
-        else if(SCounter >= currwave.EperWave && ERemoved >= currwave.EperWave)
+        else
         {
-            currwaveindex = (currwaveindex + 1) % waves.Length;
-            SCounter = 0;
+            STime -= Time.deltaTime;
+            if (STime <= 0 && SCounter < currwave.EperWave)
+            {
+                STime = currwave.Sinterval;
+                SpawnE();
+                SCounter++;
+            }
+            else if (SCounter >= currwave.EperWave && ERemoved >= currwave.EperWave)
+            {
+                isbetweenW = true;
+                WCooldown = WDelay;
+            }
         }
     }
 
@@ -53,4 +93,10 @@ public class EnemySpawner : MonoBehaviour
             SpawnedObj.SetActive(true);
         }
     }
+
+    private void EReachingBase(EData data)
+    {
+        ERemoved++;
+    }
+
 }

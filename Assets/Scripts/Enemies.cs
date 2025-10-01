@@ -1,8 +1,10 @@
 using UnityEngine;
-
+using System;
 public class Enemies : MonoBehaviour
 {
     [SerializeField] private EData data;
+
+    public static event Action<EData> OnReachingBase;
 
     private Pathway currpathway;
 
@@ -37,6 +39,7 @@ public class Enemies : MonoBehaviour
             }
             else
             {
+                OnReachingBase?.Invoke(data);
                 gameObject.SetActive(false);
             }
 
