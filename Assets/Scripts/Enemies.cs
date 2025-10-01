@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class Enemies : MonoBehaviour
 {
-    [SerializeField] private float speed = 3f;
-    [SerializeField] private Pathway currpathway;
+    [SerializeField] private EData data;
+
+    private Pathway currpathway;
 
     private Vector3 targetPlace;
 
@@ -24,7 +25,7 @@ public class Enemies : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, targetPlace, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetPlace, data.speed * Time.deltaTime);
 
         float roughlength = (transform.position - targetPlace).magnitude;
         if (roughlength < 0.1f )

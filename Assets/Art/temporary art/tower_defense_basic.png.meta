@@ -112,7 +112,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -150,7 +150,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -191,10 +191,10 @@ TextureImporter:
       name: tower_defense_basic_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 5
-        width: 74
-        height: 92
+        x: 14
+        y: 6
+        width: 72
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,10 +213,10 @@ TextureImporter:
       name: tower_defense_basic_1
       rect:
         serializedVersion: 2
-        x: 116
-        y: 21
-        width: 68
-        height: 69
+        x: 117
+        y: 22
+        width: 66
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,10 +235,10 @@ TextureImporter:
       name: tower_defense_basic_2
       rect:
         serializedVersion: 2
-        x: 200
-        y: 2
-        width: 100
-        height: 95
+        x: 201
+        y: 3
+        width: 98
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +257,10 @@ TextureImporter:
       name: tower_defense_basic_3
       rect:
         serializedVersion: 2
-        x: 434
-        y: 22
-        width: 32
-        height: 55
+        x: 435
+        y: 23
+        width: 30
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,10 +279,10 @@ TextureImporter:
       name: tower_defense_basic_4
       rect:
         serializedVersion: 2
-        x: 500
-        y: 0
-        width: 100
-        height: 100
+        x: 501
+        y: 1
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,10 +301,10 @@ TextureImporter:
       name: tower_defense_basic_5
       rect:
         serializedVersion: 2
-        x: 628
-        y: 28
-        width: 44
-        height: 44
+        x: 741
+        y: 73
+        width: 18
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,10 +323,10 @@ TextureImporter:
       name: tower_defense_basic_6
       rect:
         serializedVersion: 2
-        x: 740
-        y: 72
-        width: 20
-        height: 25
+        x: 806
+        y: 9
+        width: 88
+        height: 83
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,10 +345,10 @@ TextureImporter:
       name: tower_defense_basic_7
       rect:
         serializedVersion: 2
-        x: 805
-        y: 8
-        width: 90
-        height: 85
+        x: 939
+        y: 73
+        width: 23
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,10 +367,10 @@ TextureImporter:
       name: tower_defense_basic_8
       rect:
         serializedVersion: 2
-        x: 938
-        y: 72
-        width: 25
-        height: 26
+        x: 1029
+        y: 63
+        width: 42
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,10 +389,10 @@ TextureImporter:
       name: tower_defense_basic_9
       rect:
         serializedVersion: 2
-        x: 1012
-        y: 28
-        width: 26
-        height: 44
+        x: 1129
+        y: 73
+        width: 42
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,10 +411,10 @@ TextureImporter:
       name: tower_defense_basic_10
       rect:
         serializedVersion: 2
-        x: 1028
+        x: 1229
         y: 62
-        width: 44
-        height: 26
+        width: 42
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,10 +433,10 @@ TextureImporter:
       name: tower_defense_basic_11
       rect:
         serializedVersion: 2
-        x: 1062
-        y: 28
-        width: 26
-        height: 44
+        x: 340
+        y: 40
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,10 +455,10 @@ TextureImporter:
       name: tower_defense_basic_12
       rect:
         serializedVersion: 2
-        x: 1102
-        y: 28
-        width: 26
-        height: 44
+        x: 629
+        y: 29
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,10 +477,10 @@ TextureImporter:
       name: tower_defense_basic_13
       rect:
         serializedVersion: 2
-        x: 1128
-        y: 72
-        width: 44
-        height: 26
+        x: 703
+        y: 42
+        width: 24
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,10 +499,10 @@ TextureImporter:
       name: tower_defense_basic_14
       rect:
         serializedVersion: 2
-        x: 1172
-        y: 28
-        width: 26
-        height: 44
+        x: 773
+        y: 42
+        width: 25
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -521,10 +521,10 @@ TextureImporter:
       name: tower_defense_basic_15
       rect:
         serializedVersion: 2
-        x: 1204
-        y: 28
-        width: 26
-        height: 44
+        x: 910
+        y: 9
+        width: 81
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -543,10 +543,10 @@ TextureImporter:
       name: tower_defense_basic_16
       rect:
         serializedVersion: 2
-        x: 1228
-        y: 61
-        width: 44
-        height: 26
+        x: 1013
+        y: 29
+        width: 24
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,10 +565,10 @@ TextureImporter:
       name: tower_defense_basic_17
       rect:
         serializedVersion: 2
-        x: 1270
-        y: 28
-        width: 26
-        height: 44
+        x: 1063
+        y: 29
+        width: 24
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -587,10 +587,10 @@ TextureImporter:
       name: tower_defense_basic_18
       rect:
         serializedVersion: 2
-        x: 339
-        y: 39
-        width: 22
-        height: 22
+        x: 1103
+        y: 29
+        width: 24
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,10 +609,10 @@ TextureImporter:
       name: tower_defense_basic_19
       rect:
         serializedVersion: 2
-        x: 702
-        y: 41
-        width: 26
-        height: 16
+        x: 1173
+        y: 29
+        width: 24
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,10 +631,10 @@ TextureImporter:
       name: tower_defense_basic_20
       rect:
         serializedVersion: 2
-        x: 772
-        y: 41
-        width: 27
-        height: 16
+        x: 1205
+        y: 29
+        width: 24
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -653,10 +653,10 @@ TextureImporter:
       name: tower_defense_basic_21
       rect:
         serializedVersion: 2
-        x: 909
-        y: 8
-        width: 83
-        height: 40
+        x: 1271
+        y: 29
+        width: 24
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -675,10 +675,10 @@ TextureImporter:
       name: tower_defense_basic_22
       rect:
         serializedVersion: 2
-        x: 740
-        y: 3
-        width: 20
-        height: 25
+        x: 741
+        y: 4
+        width: 18
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -697,10 +697,10 @@ TextureImporter:
       name: tower_defense_basic_23
       rect:
         serializedVersion: 2
-        x: 1028
-        y: 14
-        width: 44
-        height: 26
+        x: 1029
+        y: 15
+        width: 42
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -719,10 +719,10 @@ TextureImporter:
       name: tower_defense_basic_24
       rect:
         serializedVersion: 2
-        x: 1128
-        y: 2
-        width: 44
-        height: 26
+        x: 1129
+        y: 3
+        width: 42
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -741,10 +741,10 @@ TextureImporter:
       name: tower_defense_basic_25
       rect:
         serializedVersion: 2
-        x: 1228
-        y: 13
-        width: 44
-        height: 26
+        x: 1229
+        y: 14
+        width: 42
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -763,7 +763,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ece8adeb518b5d846a8ce4085550b968
     internalID: 0
     vertices: []
     indices: 
@@ -772,7 +772,33 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tower_defense_basic_0: 7819795421736181519
+      tower_defense_basic_1: 695429007310160580
+      tower_defense_basic_10: 4131887431961472327
+      tower_defense_basic_11: 7586205836040711132
+      tower_defense_basic_12: -2883214199594693391
+      tower_defense_basic_13: -3250710968389454922
+      tower_defense_basic_14: -6054005743697416469
+      tower_defense_basic_15: -39771427204379487
+      tower_defense_basic_16: 4302622183601194860
+      tower_defense_basic_17: -1512334649648454869
+      tower_defense_basic_18: -3867061678365283265
+      tower_defense_basic_19: -6275660014484673852
+      tower_defense_basic_2: 8816747139719857424
+      tower_defense_basic_20: -6383947516550817450
+      tower_defense_basic_21: 7374204734377416862
+      tower_defense_basic_22: 7692740713065641310
+      tower_defense_basic_23: 8514178384917130730
+      tower_defense_basic_24: -8878537342402571611
+      tower_defense_basic_25: -5852143513230670625
+      tower_defense_basic_3: 2196608551099265960
+      tower_defense_basic_4: -8982367984945633798
+      tower_defense_basic_5: -1612818156496286015
+      tower_defense_basic_6: 9168438863784056491
+      tower_defense_basic_7: -1401025463511422960
+      tower_defense_basic_8: -6934368480270860225
+      tower_defense_basic_9: 7538528287983206177
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
