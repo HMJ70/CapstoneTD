@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tower1
   m_EditorClassIdentifier: 
   range: 3
-  attackspeed: 1
+  attackdelay: 1
   bulletspeed: 10
   bulletduration: 2
   dmg: 1

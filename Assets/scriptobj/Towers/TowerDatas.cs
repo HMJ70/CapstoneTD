@@ -4,7 +4,7 @@ using UnityEngine;
 public class TowerDatas : ScriptableObject
 {
     public float range;
-    public float attackspeed;
+    public float attackdelay;
     public float bulletspeed;
     public float bulletduration;
     public float dmg;

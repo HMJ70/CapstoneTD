@@ -5,6 +5,7 @@ public class Enemies : MonoBehaviour
     [SerializeField] private EData data;
 
     public static event Action<EData> OnReachingBase;
+    public static event Action<Enemies> OnEnemyKilled;
 
     private Pathway currpathway;
 
@@ -12,6 +13,7 @@ public class Enemies : MonoBehaviour
 
     private int currWayP;
 
+    private float HP;
 
     private void Awake()
     {
@@ -23,6 +25,7 @@ public class Enemies : MonoBehaviour
     {
         currWayP = 0;
         targetPlace = currpathway.GetPos(currWayP);
+        HP = data.hp;
     }
 
     void Update()
@@ -46,5 +49,14 @@ public class Enemies : MonoBehaviour
         }
     }
 
-
+    public void TakeDMG(float dmg)
+    {
+        HP -= dmg;
+        HP = Math.Max(HP,0);
+        if(HP <= 0)
+        {
+            OnEnemyKilled?.Invoke(this);
+            gameObject.SetActive(false);
+        }
+    }
 }

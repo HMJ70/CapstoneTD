@@ -40,11 +40,13 @@ public class EnemySpawner : MonoBehaviour
     private void OnEnable()
     {
         Enemies.OnReachingBase += EReachingBase;
+        Enemies.OnEnemyKilled += EKilled;
     }
 
     private void OnDisable()
     {
         Enemies.OnReachingBase -= EReachingBase;
+        Enemies.OnEnemyKilled -= EKilled;
     }
 
     private void Start()
@@ -99,4 +101,8 @@ public class EnemySpawner : MonoBehaviour
         ERemoved++;
     }
 
+    private void EKilled(Enemies enemies)
+    {
+        ERemoved++;
+    }
 }
