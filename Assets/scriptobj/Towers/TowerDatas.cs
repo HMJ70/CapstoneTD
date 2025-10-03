@@ -7,5 +7,6 @@ public class TowerDatas : ScriptableObject
     public float attackdelay;
     public float bulletspeed;
     public float bulletduration;
+    public float bulletsize;
     public float dmg;
 }

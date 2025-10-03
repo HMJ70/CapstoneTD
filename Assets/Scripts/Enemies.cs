@@ -19,6 +19,7 @@ public class Enemies : MonoBehaviour
 
     [SerializeField] private Transform hpbar;
     private Vector3 hpbarog;
+    private bool counted = false;
 
     private void Awake()
     {
@@ -35,6 +36,7 @@ public class Enemies : MonoBehaviour
 
     void Update()
     {
+        if (counted) return;
         transform.position = Vector3.MoveTowards(transform.position, targetPlace, data.speed * Time.deltaTime);
 
         float roughlength = (transform.position - targetPlace).magnitude;
@@ -47,6 +49,7 @@ public class Enemies : MonoBehaviour
             }
             else
             {
+                counted = true;
                 OnReachingBase?.Invoke(data);
                 gameObject.SetActive(false);
             }
@@ -56,11 +59,13 @@ public class Enemies : MonoBehaviour
 
     public void TakeDMG(float dmg)
     {
+        if (counted) return;
         HP -= dmg;
         HP = Math.Max(HP,0);
         hpbarchange();
         if (HP <= 0)
         {
+            counted = true;
             OnEnemyKilled?.Invoke(this);
             gameObject.SetActive(false);
         }
@@ -76,6 +81,7 @@ public class Enemies : MonoBehaviour
 
     public void Initialize(float hpmult)
     {
+        counted = false;
         maxhp = data.hp * hpmult;
         HP = maxhp;
         hpbarchange();

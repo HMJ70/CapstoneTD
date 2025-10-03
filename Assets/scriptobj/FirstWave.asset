@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FirstWave
   m_EditorClassIdentifier: 
   Etype: 0
-  Sinterval: 1
-  EperWave: 3
+  Sinterval: 0.8
+  EperWave: 5

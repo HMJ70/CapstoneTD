@@ -63,6 +63,8 @@ public class Towers : MonoBehaviour
 
     private void Shoot()
     {
+        enemiesinrange.RemoveAll(enemies => enemies == null || !enemies.gameObject.activeInHierarchy);
+
         if(enemiesinrange.Count > 0)
         {
             GameObject Bullet = bulletpool.GetPObj();

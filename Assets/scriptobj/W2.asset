@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: W2
   m_EditorClassIdentifier: 
   Etype: 1
-  Sinterval: 2
-  EperWave: 2
+  Sinterval: 0.5
+  EperWave: 20

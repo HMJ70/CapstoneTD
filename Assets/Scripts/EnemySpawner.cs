@@ -22,7 +22,7 @@ public class EnemySpawner : MonoBehaviour
 
     private Dictionary<EType, ObjPool> poolDict;
 
-    private float WDelay = 2f;
+    private float WDelay = 1f;
     private float WCooldown;
     private bool isbetweenW = false;
 

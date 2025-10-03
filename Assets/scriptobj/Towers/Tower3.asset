@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39fa062dee7b42a4c9f570ff46ef0946, type: 3}
-  m_Name: W3
+  m_Script: {fileID: 11500000, guid: e9fd011df7a228b41be97c0f25dd8f55, type: 3}
+  m_Name: Tower3
   m_EditorClassIdentifier: 
-  Etype: 2
-  Sinterval: 1
-  EperWave: 15
+  range: 3
+  attackdelay: 1
+  bulletspeed: 4
+  bulletduration: 3
+  bulletsize: 2
+  dmg: 3

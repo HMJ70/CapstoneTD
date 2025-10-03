@@ -5,6 +5,10 @@ public class Bullet : MonoBehaviour
     private TowerDatas datas;
     private Vector3 shootdirections;
     private float bulletdurations;
+    void Start()
+    {
+        transform.localScale = Vector3.one * datas.bulletsize;
+    }
     void Update()
     {
         if (bulletdurations <= 0)
