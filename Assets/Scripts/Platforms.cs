@@ -22,4 +22,9 @@ public class Platforms : MonoBehaviour
             }
         }
     }
+
+    public void PlaceTower(TowerDatas data)
+    {
+        Instantiate(data.prefab,transform.position,Quaternion.identity,transform);
+    }
 }

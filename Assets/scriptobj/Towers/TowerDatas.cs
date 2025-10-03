@@ -9,4 +9,7 @@ public class TowerDatas : ScriptableObject
     public float bulletduration;
     public float bulletsize;
     public float dmg;
+    public int price;
+    public Sprite sprite;
+    public GameObject prefab;
 }

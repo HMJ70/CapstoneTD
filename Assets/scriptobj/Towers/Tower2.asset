@@ -18,3 +18,6 @@ MonoBehaviour:
   bulletduration: 0.5
   bulletsize: 0.5
   dmg: 0.1
+  price: 75
+  sprite: {fileID: 4807368976079870889, guid: 30077e23f5e166549875751c27850daf, type: 3}
+  prefab: {fileID: 8985160936646698667, guid: 5dd6bdaf0613cd94f984729cbd40dc7e, type: 3}
