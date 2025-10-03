@@ -65,7 +65,7 @@ public class EnemySpawner : MonoBehaviour
                 OnWchanged?.Invoke(CountW);
                 SCounter = 0;
                 ERemoved = 0;
-                STime = currwave.Sinterval;// can be set to zero =0f; for instant
+                STime = 0f;// can be set to zero =0f; for instant or currwave.Sinterval
                 isbetweenW = false;
             }
         }
@@ -92,6 +92,9 @@ public class EnemySpawner : MonoBehaviour
         {
             GameObject SpawnedObj = pool.GetPObj();
             SpawnedObj.transform.position = transform.position;
+            float hpmultiplier = 1f + (CountW * 0.1f); //10%health increase bruh
+            Enemies enemies = SpawnedObj.GetComponent<Enemies>();
+            enemies.Initialize(hpmultiplier);
             SpawnedObj.SetActive(true);
         }
     }

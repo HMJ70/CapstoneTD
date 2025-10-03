@@ -3,7 +3,7 @@ using System;
 public class Enemies : MonoBehaviour
 {
     [SerializeField] private EData data;
-
+    public EData Dataz => data;
     public static event Action<EData> OnReachingBase;
     public static event Action<Enemies> OnEnemyKilled;
 
@@ -15,9 +15,15 @@ public class Enemies : MonoBehaviour
 
     private float HP;
 
+    private float maxhp;
+
+    [SerializeField] private Transform hpbar;
+    private Vector3 hpbarog;
+
     private void Awake()
     {
         currpathway = GameObject.Find("Pathway").GetComponent<Pathway>();
+        hpbarog = hpbar.localScale;
     }
 
 
@@ -25,7 +31,6 @@ public class Enemies : MonoBehaviour
     {
         currWayP = 0;
         targetPlace = currpathway.GetPos(currWayP);
-        HP = data.hp;
     }
 
     void Update()
@@ -53,10 +58,28 @@ public class Enemies : MonoBehaviour
     {
         HP -= dmg;
         HP = Math.Max(HP,0);
-        if(HP <= 0)
+        hpbarchange();
+        if (HP <= 0)
         {
             OnEnemyKilled?.Invoke(this);
             gameObject.SetActive(false);
         }
     }
+
+    private void hpbarchange()
+    {
+        float hpercent = HP / maxhp;
+        Vector3 scale = hpbarog;
+        scale.x = hpbarog.x * hpercent;
+        hpbar.localScale = scale;
+    }
+
+    public void Initialize(float hpmult)
+    {
+        maxhp = data.hp * hpmult;
+        HP = maxhp;
+        hpbarchange();
+    }
+
+
 }

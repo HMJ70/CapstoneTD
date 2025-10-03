@@ -11,6 +11,14 @@ public class Towers : MonoBehaviour
     private ObjPool bulletpool;
 
     private float shootime;
+    private void OnEnable()
+    {
+        Enemies.OnEnemyKilled += Enemygone;
+    }
+    private void OnDisable()
+    {
+        Enemies.OnEnemyKilled -= Enemygone;
+    }
 
     private void Start()
     {
@@ -64,4 +72,10 @@ public class Towers : MonoBehaviour
             Bullet.GetComponent<Bullet>().Shoot(data, shootdirection);
         }
     }
+
+    private void Enemygone(Enemies enemies)
+    {
+        enemiesinrange.Remove(enemies);
+    }
+
 }

@@ -4,15 +4,18 @@ using UnityEngine;
 public class GManager : MonoBehaviour
 {
     public static event Action<int> OnHPChange;
-
+    public static event Action<int> OnCoinsChange;
+    private int loot = 0;
     private int HP = 20;
     private void OnEnable()
     {
         Enemies.OnReachingBase += HEReachingBase;
+        Enemies.OnEnemyKilled += HEkilled;
     }
     private void OnDisable()
     {
         Enemies.OnReachingBase -= HEReachingBase;
+        Enemies.OnEnemyKilled -= HEkilled;
     }
     private void HEReachingBase(EData data)
     {
@@ -22,5 +25,17 @@ public class GManager : MonoBehaviour
     private void Start()
     {
         OnHPChange?.Invoke(HP);
+        OnCoinsChange?.Invoke(loot);
     }
+    private void HEkilled(Enemies enemies)
+    {
+        lootgain(Mathf.RoundToInt(enemies.Dataz.Eloot));
+    }
+    private void lootgain(int amount)
+    {
+        loot += amount;
+        OnCoinsChange?.Invoke(loot);
+    }
+
+    
 }

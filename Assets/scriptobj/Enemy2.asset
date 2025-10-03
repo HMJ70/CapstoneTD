@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Enemy2
   m_EditorClassIdentifier: 
   hp: 2
-  dmg: 1
+  dmg: 3
   speed: 6
+  Eloot: 2
