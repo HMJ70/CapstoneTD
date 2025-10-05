@@ -51,7 +51,7 @@ public class UI : MonoBehaviour
         Platforms.OnPlatformsClicked -= HPlatformClicked;
         TCard.ontowerselected -= HTowerSelected;
         SceneManager.sceneLoaded -= OnSceneLoaded;
-        EnemySpawner.Onmissioncomplete += showmissioncomplete;
+        EnemySpawner.Onmissioncomplete -= showmissioncomplete;
     }
     private void Start()
     {
