@@ -3,6 +3,10 @@ using TMPro;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
+using Scene = UnityEngine.SceneManagement.Scene;
 
 public class UI : MonoBehaviour
 {
@@ -21,8 +25,9 @@ public class UI : MonoBehaviour
     [SerializeField] private Color selectedbutton = Color.blue;
     [SerializeField] private Color normaltextcolor = Color.black;
     [SerializeField] private Color selectedtext = Color.white;
+    [SerializeField] private GameObject pausemenu;
 
-
+    private bool isgamepaused = false;
     private List<GameObject> activeCards = new List<GameObject>();
     private Platforms currplatform;
     private void OnEnable()
@@ -47,6 +52,14 @@ public class UI : MonoBehaviour
         speed2.onClick.AddListener(() => SetGameSpeed(1f));
         speed3.onClick.AddListener(() => SetGameSpeed(2f));
         highlightselectedspeedbutton(GManager.instance.Gamespeed);
+    }
+
+    private void Update()
+    {
+        if(Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            TogglePause();
+        }
     }
     private void UpdateWave(int currwave)
     {
@@ -140,6 +153,39 @@ public class UI : MonoBehaviour
         updatebuttonvisual(speed1, selectedspeed == 0.5f);
         updatebuttonvisual(speed2, selectedspeed == 1f);
         updatebuttonvisual(speed3, selectedspeed == 2f);
+    }
+
+    public void TogglePause()
+    {
+        if(Tpanel.activeSelf)
+        {
+            return;
+        }
+
+        if (isgamepaused)
+        {
+            pausemenu.SetActive(false);
+            isgamepaused = false;
+            GManager.instance.SetTimeScale(GManager.instance.Gamespeed);
+        }
+        else
+        {
+            pausemenu.SetActive(true);
+            isgamepaused = true;
+            GManager.instance.SetTimeScale(0f);
+        }
+    }
+
+    public void RestartLVL()
+    {
+        GManager.instance.SetTimeScale(1f);
+        Scene currscene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currscene.buildIndex);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 
 }

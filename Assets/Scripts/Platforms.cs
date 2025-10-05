@@ -8,7 +8,7 @@ public class Platforms : MonoBehaviour
     public static bool Tpanelopen { get; set; } = false;
     private void Update()
     {
-        if (Tpanelopen)
+        if (Tpanelopen || Time.timeScale == 0f)
         {
             return;
         }
