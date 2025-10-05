@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using System.Collections;
 
 public class UI : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class UI : MonoBehaviour
     [SerializeField] private GameObject TcardPrefab;
     [SerializeField] private Transform cardcontainer;
     [SerializeField] private TowerDatas[] towers;
+    [SerializeField] private GameObject notenoughcoins;
 
     private List<GameObject> activeCards = new List<GameObject>();
     private Platforms currplatform;
@@ -53,12 +55,14 @@ public class UI : MonoBehaviour
     private void ShowTPanel()
     {
         Tpanel.SetActive(true);
+        Platforms.Tpanelopen = true;
         GManager.instance.SetTimeScale(0f);
         PTcards();
     }
     public void HideTPanel()
     {
         Tpanel.SetActive(false);
+        Platforms.Tpanelopen = false;
         GManager.instance.SetTimeScale(1f);
     }
 
@@ -80,7 +84,23 @@ public class UI : MonoBehaviour
 
     private void HTowerSelected(TowerDatas towerDatas)
     {
-        currplatform.PlaceTower(towerDatas);
+        if(GManager.instance.loots >= towerDatas.price)
+        {
+            GManager.instance.spendmoney(towerDatas.price);
+            currplatform.PlaceTower(towerDatas);
+        }
+        else
+        {
+            StartCoroutine(ShowNoCoinsMessage());
+        }
         HideTPanel();
     }
+
+    private IEnumerator ShowNoCoinsMessage()
+    {
+        notenoughcoins.SetActive(true);
+        yield return new WaitForSecondsRealtime(3f);
+        notenoughcoins.SetActive(false);
+    }
+
 }

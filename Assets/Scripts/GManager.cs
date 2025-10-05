@@ -6,8 +6,9 @@ public class GManager : MonoBehaviour
     public static GManager instance { get; private set; }
     public static event Action<int> OnHPChange;
     public static event Action<int> OnCoinsChange;
-    private int loot = 0;
+    private int loot = 200;
     private int HP = 20;
+    public int loots => loot;
 
     private void Awake()
     {
@@ -55,4 +56,12 @@ public class GManager : MonoBehaviour
         Time.timeScale = timeScale;
     }
     
+    public void spendmoney(int amount)
+    {
+        if(loot >= amount)
+        {
+            loot -= amount;
+            OnCoinsChange?.Invoke(loot);
+        }
+    }
 }
