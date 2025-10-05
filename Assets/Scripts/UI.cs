@@ -28,6 +28,7 @@ public class UI : MonoBehaviour
     [SerializeField] private GameObject pausemenu;
     [SerializeField] private GameObject gameover;
     [SerializeField] private TMP_Text OBJectivetext;
+    [SerializeField] private GameObject missioncomplete;
 
     private bool isgamepaused = false;
     private List<GameObject> activeCards = new List<GameObject>();
@@ -40,6 +41,7 @@ public class UI : MonoBehaviour
         Platforms.OnPlatformsClicked += HPlatformClicked;
         TCard.ontowerselected += HTowerSelected;
         SceneManager.sceneLoaded += OnSceneLoaded;
+        EnemySpawner.Onmissioncomplete += showmissioncomplete;
     }
     private void OnDisable()
     {
@@ -49,6 +51,7 @@ public class UI : MonoBehaviour
         Platforms.OnPlatformsClicked -= HPlatformClicked;
         TCard.ontowerselected -= HTowerSelected;
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        EnemySpawner.Onmissioncomplete += showmissioncomplete;
     }
     private void Start()
     {
@@ -193,9 +196,7 @@ public class UI : MonoBehaviour
 
     public void RestartLVL()
     {
-        GManager.instance.SetTimeScale(1f);
-        Scene currscene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currscene.buildIndex);
+        lvlmanager.instance.loadlevel(lvlmanager.instance.currlvl);
     }
 
     public void Quit()
@@ -222,9 +223,22 @@ public class UI : MonoBehaviour
 
     private IEnumerator showOBJective()
     {
-        OBJectivetext.text = $"Survive XXX Waves!";
+        OBJectivetext.text = $"Survive {lvlmanager.instance.currlvl.wavestowin} Waves!";
         OBJectivetext.gameObject.SetActive(true);
         yield return new WaitForSeconds(5f);
         OBJectivetext.gameObject.SetActive(false);
+    }
+
+    private void showmissioncomplete()
+    {
+        missioncomplete.SetActive(true);
+        GManager.instance.SetTimeScale(0f);
+    }
+
+    public void EnterEndlessmode()
+    {
+        missioncomplete.SetActive(false);
+        GManager.instance.SetTimeScale(GManager.instance.Gamespeed);
+        EnemySpawner.Instance.EnableEndlessMode();
     }
 }

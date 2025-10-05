@@ -15,4 +15,4 @@ MonoBehaviour:
   hp: 2
   dmg: 3
   speed: 5
-  Eloot: 2
+  Eloot: 10

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public static EnemySpawner Instance { get; private set; }
     public static event Action<int> OnWchanged;
-
+    public static event Action Onmissioncomplete;
     [SerializeField] private WData[] waves;
 
     private int CountW = 0;
@@ -25,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
     private float WDelay = 1f;
     private float WCooldown;
     private bool isbetweenW = false;
-
+    private bool isendlessmode = false;
 
     private void Awake()
     {
@@ -35,6 +36,14 @@ public class EnemySpawner : MonoBehaviour
             { EType.enemy2, EnemyPool2},
             { EType.enemy3, EnemyPool3},
         };
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
     }
 
     private void OnEnable()
@@ -60,6 +69,12 @@ public class EnemySpawner : MonoBehaviour
             WCooldown -= Time.deltaTime;
             if(WCooldown <= 0f )
             {
+                if(CountW + 1 >= lvlmanager.instance.currlvl.wavestowin && !isendlessmode)
+                {
+                    Onmissioncomplete?.Invoke();
+                    return;
+                }
+
                 currwaveindex = (currwaveindex + 1) % waves.Length;
                 CountW++;
                 OnWchanged?.Invoke(CountW);
@@ -107,5 +122,10 @@ public class EnemySpawner : MonoBehaviour
     private void EKilled(Enemies enemies)
     {
         ERemoved++;
+    }
+
+    public void EnableEndlessMode()
+    {
+        isendlessmode = true;
     }
 }

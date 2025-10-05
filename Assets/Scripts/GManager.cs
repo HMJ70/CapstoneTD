@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GManager : MonoBehaviour
 {
@@ -27,11 +28,13 @@ public class GManager : MonoBehaviour
     {
         Enemies.OnReachingBase += HEReachingBase;
         Enemies.OnEnemyKilled += HEkilled;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
     private void OnDisable()
     {
         Enemies.OnReachingBase -= HEReachingBase;
         Enemies.OnEnemyKilled -= HEkilled;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
     private void HEReachingBase(EData data)
     {
@@ -71,5 +74,19 @@ public class GManager : MonoBehaviour
             loot -= amount;
             OnCoinsChange?.Invoke(loot);
         }
+    }
+
+    public void resetgame()
+    {
+        HP = lvlmanager.instance.currlvl.startingHP;
+        OnHPChange?.Invoke(HP);
+        loot = lvlmanager.instance.currlvl.startingcoins;
+        OnCoinsChange?.Invoke(loot);
+        setgamespeed(1f);
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        resetgame();
     }
 }
