@@ -17,7 +17,7 @@ public class UI : MonoBehaviour
     [SerializeField] private GameObject TcardPrefab;
     [SerializeField] private Transform cardcontainer;
     [SerializeField] private TowerDatas[] towers;
-    [SerializeField] private GameObject notenoughcoins;
+    [SerializeField] private TMP_Text Warning;
     [SerializeField] private Button speed1;
     [SerializeField] private Button speed2;
     [SerializeField] private Button speed3;
@@ -26,6 +26,8 @@ public class UI : MonoBehaviour
     [SerializeField] private Color normaltextcolor = Color.black;
     [SerializeField] private Color selectedtext = Color.white;
     [SerializeField] private GameObject pausemenu;
+    [SerializeField] private GameObject gameover;
+    [SerializeField] private TMP_Text OBJectivetext;
 
     private bool isgamepaused = false;
     private List<GameObject> activeCards = new List<GameObject>();
@@ -37,6 +39,7 @@ public class UI : MonoBehaviour
         GManager.OnCoinsChange += UpdateCoins;
         Platforms.OnPlatformsClicked += HPlatformClicked;
         TCard.ontowerselected += HTowerSelected;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
     private void OnDisable()
     {
@@ -45,6 +48,7 @@ public class UI : MonoBehaviour
         GManager.OnCoinsChange -= UpdateCoins;
         Platforms.OnPlatformsClicked -= HPlatformClicked;
         TCard.ontowerselected -= HTowerSelected;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
     private void Start()
     {
@@ -69,6 +73,10 @@ public class UI : MonoBehaviour
     private void UpdateHP(int currHP)
     {
         HP.text = $"Lives: {currHP}";
+        if(currHP <= 0)
+        {
+            ShowGameOver();
+        }
     }
 
     private void UpdateCoins(int currcoins)
@@ -113,6 +121,12 @@ public class UI : MonoBehaviour
 
     private void HTowerSelected(TowerDatas towerDatas)
     {
+        if(currplatform.transform.childCount > 1)
+        {
+            HideTPanel();
+            StartCoroutine(ShowWarning("Already Has A Tower!"));
+            return;
+        }
         if(GManager.instance.loots >= towerDatas.price)
         {
             GManager.instance.spendmoney(towerDatas.price);
@@ -120,16 +134,17 @@ public class UI : MonoBehaviour
         }
         else
         {
-            StartCoroutine(ShowNoCoinsMessage());
+            StartCoroutine(ShowWarning("Not Enough Coins!"));
         }
         HideTPanel();
     }
 
-    private IEnumerator ShowNoCoinsMessage()
+    private IEnumerator ShowWarning(string message)
     {
-        notenoughcoins.SetActive(true);
+        Warning.text = message;
+        Warning.gameObject.SetActive(true);
         yield return new WaitForSecondsRealtime(3f);
-        notenoughcoins.SetActive(false);
+        Warning.gameObject.SetActive(false);
     }
 
     private void SetGameSpeed(float timescale)
@@ -188,4 +203,28 @@ public class UI : MonoBehaviour
         Application.Quit();
     }
 
+    public void gotomainmenu()
+    {
+        GManager.instance.SetTimeScale(1f);
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    private void ShowGameOver()
+    {
+        GManager.instance.SetTimeScale(0f);
+        gameover.SetActive(true);
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        StartCoroutine(showOBJective());
+    }
+
+    private IEnumerator showOBJective()
+    {
+        OBJectivetext.text = $"Survive XXX Waves!";
+        OBJectivetext.gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        OBJectivetext.gameObject.SetActive(false);
+    }
 }
