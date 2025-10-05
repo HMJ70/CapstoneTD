@@ -8,6 +8,8 @@ public class GManager : MonoBehaviour
     public static event Action<int> OnCoinsChange;
     private int loot = 200;
     private int HP = 20;
+    private float gamespeed = 1f;
+    public float Gamespeed => gamespeed;
     public int loots => loot;
 
     private void Awake()
@@ -56,6 +58,12 @@ public class GManager : MonoBehaviour
         Time.timeScale = timeScale;
     }
     
+    public void setgamespeed(float newspeed)
+    {
+        gamespeed = newspeed;
+        SetTimeScale(gamespeed);
+    }
+
     public void spendmoney(int amount)
     {
         if(loot >= amount)

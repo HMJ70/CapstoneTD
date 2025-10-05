@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
@@ -13,6 +14,14 @@ public class UI : MonoBehaviour
     [SerializeField] private Transform cardcontainer;
     [SerializeField] private TowerDatas[] towers;
     [SerializeField] private GameObject notenoughcoins;
+    [SerializeField] private Button speed1;
+    [SerializeField] private Button speed2;
+    [SerializeField] private Button speed3;
+    [SerializeField] private Color normalbuttoncolor = Color.white;
+    [SerializeField] private Color selectedbutton = Color.blue;
+    [SerializeField] private Color normaltextcolor = Color.black;
+    [SerializeField] private Color selectedtext = Color.white;
+
 
     private List<GameObject> activeCards = new List<GameObject>();
     private Platforms currplatform;
@@ -31,6 +40,13 @@ public class UI : MonoBehaviour
         GManager.OnCoinsChange -= UpdateCoins;
         Platforms.OnPlatformsClicked -= HPlatformClicked;
         TCard.ontowerselected -= HTowerSelected;
+    }
+    private void Start()
+    {
+        speed1.onClick.AddListener(() => SetGameSpeed(0.5f));
+        speed2.onClick.AddListener(() => SetGameSpeed(1f));
+        speed3.onClick.AddListener(() => SetGameSpeed(2f));
+        highlightselectedspeedbutton(GManager.instance.Gamespeed);
     }
     private void UpdateWave(int currwave)
     {
@@ -63,7 +79,7 @@ public class UI : MonoBehaviour
     {
         Tpanel.SetActive(false);
         Platforms.Tpanelopen = false;
-        GManager.instance.SetTimeScale(1f);
+        GManager.instance.SetTimeScale(GManager.instance.Gamespeed);
     }
 
     private void PTcards()
@@ -101,6 +117,29 @@ public class UI : MonoBehaviour
         notenoughcoins.SetActive(true);
         yield return new WaitForSecondsRealtime(3f);
         notenoughcoins.SetActive(false);
+    }
+
+    private void SetGameSpeed(float timescale)
+    {
+        highlightselectedspeedbutton(timescale);
+        GManager.instance.setgamespeed(timescale);
+    }
+
+    private void updatebuttonvisual(Button button, bool isselected)
+    {
+        button.image.color = isselected ? selectedbutton : normalbuttoncolor;
+        TMP_Text text = button.GetComponentInChildren<TMP_Text>();
+        if(text != null)
+        {
+            text.color = isselected ? selectedtext : normaltextcolor;
+        }
+    }
+
+    private void highlightselectedspeedbutton(float selectedspeed)
+    {
+        updatebuttonvisual(speed1, selectedspeed == 0.5f);
+        updatebuttonvisual(speed2, selectedspeed == 1f);
+        updatebuttonvisual(speed3, selectedspeed == 2f);
     }
 
 }
