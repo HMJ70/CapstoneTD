@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Tower2
   m_EditorClassIdentifier: 
   range: 4
-  attackdelay: 0.1
-  bulletspeed: 8
+  attackdelay: 0.05
+  bulletspeed: 15
   bulletduration: 0.5
   bulletsize: 0.5
   dmg: 0.1
