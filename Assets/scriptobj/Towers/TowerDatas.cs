@@ -3,13 +3,21 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "TowerDatas", menuName = "Scriptable Objects/TowerDatas")]
 public class TowerDatas : ScriptableObject
 {
-    public float range;
-    public float attackdelay;
-    public float bulletspeed;
-    public float bulletduration;
-    public float bulletsize;
-    public float dmg;
-    public int price;
+    [Header("General Stats")]
+    public float range = 3f;
+    public float attackdelay = 1f;
+    public float bulletspeed = 5f;
+    public float bulletduration = 1f;
+    public float bulletsize = 1f;
+    public float dmg = 1f;
+    public int price = 50;
+
+    [Header("Visuals & Prefabs")]
     public Sprite sprite;
     public GameObject prefab;
+
+    [Header("Optional: Tack Shooter Settings")]
+    public bool isTackShooter = false; // determines if this uses burst logic
+    public int tackCount = 8;          // how many projectiles per burst
+    public float tackSpread = 360f;    // full circle by default
 }

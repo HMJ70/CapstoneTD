@@ -21,3 +21,5 @@ MonoBehaviour:
   price: 100
   sprite: {fileID: 5461389763933411275, guid: 30077e23f5e166549875751c27850daf, type: 3}
   prefab: {fileID: 8985160936646698667, guid: d64fd0f4d31a52b4fa75fa7d83617d76, type: 3}
+  isMelee: 1
+  meleeDamage: 0

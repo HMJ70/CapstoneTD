@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fd011df7a228b41be97c0f25dd8f55, type: 3}
+  m_Name: melee1
+  m_EditorClassIdentifier: Assembly-CSharp::TowerDatas
+  range: 1
+  attackdelay: 1
+  bulletspeed: 15
+  bulletduration: 0.05
+  bulletsize: 1
+  dmg: 3
+  price: 50
+  sprite: {fileID: 7057657135161693371, guid: 30077e23f5e166549875751c27850daf, type: 3}
+  prefab: {fileID: 8985160936646698667, guid: 030debefb138e1b44988ceb686f3e6dc, type: 3}
+  isTackShooter: 1
+  tackCount: 8
+  tackSpread: 360
