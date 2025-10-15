@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TowerDatas
   range: 1
   attackdelay: 1
-  bulletspeed: 15
-  bulletduration: 0.05
+  bulletspeed: 8
+  bulletduration: 0.15
   bulletsize: 1
   dmg: 3
   price: 50
