@@ -179,7 +179,7 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 13
+      x: 28
       y: 244
       width: 1
       height: 1
@@ -191,7 +191,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 10, y: 242}
+    uvTransform: {x: 25, y: 242}
   - name: WALLAS_3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -473,8 +473,8 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 100
-      y: 148
+      x: 148
+      y: 220
       width: 16
       height: 12
     spriteID: 7eff6a912db31a64ebe2ac9fe9753e59
@@ -485,7 +485,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 100, y: 144}
+    uvTransform: {x: 148, y: 216}
   - name: WALLAS_17
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -704,7 +704,7 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 28
+      x: 37
       y: 244
       width: 1
       height: 1
@@ -716,7 +716,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 25, y: 242}
+    uvTransform: {x: 34, y: 242}
   - name: walls_3
     originalName: 
     pivot: {x: -7, y: -3}
@@ -1124,8 +1124,8 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 100
-      y: 168
+      x: 148
+      y: 240
       width: 16
       height: 12
     spriteID: ded43d17a70afdd43bc4f266366bba10
@@ -1136,7 +1136,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 100, y: 164}
+    uvTransform: {x: 148, y: 236}
   - name: walls_23
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1221,6 +1221,552 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 100, y: 124}
+  - name: WALLS_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 148
+      width: 16
+      height: 16
+    spriteID: ba066558dff6545499001bc4392d8205
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 100, y: 148}
+  - name: WALLS_2
+    originalName: 
+    pivot: {x: 5, y: 6}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 244
+      width: 1
+      height: 1
+    spriteID: 7e978b3d11f09464f9d943b98d42267b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 242}
+  - name: WALLS_3
+    originalName: 
+    pivot: {x: -7, y: -3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 13
+      y: 244
+      width: 1
+      height: 2
+    spriteID: 9bcc11b9032cc5b4b965971758cdf700
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -2, y: 230}
+  - name: WALLS_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 172
+      width: 16
+      height: 16
+    spriteID: 641b618b3019fda4eada6b8e0245dba8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 100, y: 172}
+  - name: WALLS_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 196
+      width: 16
+      height: 16
+    spriteID: fc7fdd95ab7fff44f921d4b5b4c154d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 100, y: 196}
+  - name: WALLS_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 220
+      width: 16
+      height: 16
+    spriteID: 7321e37e0acce2843901f4efcb8108c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 100, y: 220}
+  - name: WALLS_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 4
+      width: 16
+      height: 16
+    spriteID: 5d79416e9725c4841ae3539d354ca0d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 4}
+  - name: WALLS_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 28
+      width: 16
+      height: 16
+    spriteID: 506d237595103fe4f98bd3298c553538
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 28}
+  - name: WALLS_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 52
+      width: 16
+      height: 16
+    spriteID: be45abb45662558498c5811c9a29f8cb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 52}
+  - name: WALLS_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 76
+      width: 16
+      height: 16
+    spriteID: 4feac20a652b4494a8ebc92f79f3b1cc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 76}
+  - name: WALLS_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 100
+      width: 16
+      height: 16
+    spriteID: 56008bf2b2432e144b45a6754a9ee1dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 100}
+  - name: WALLS_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 124
+      width: 16
+      height: 16
+    spriteID: 02ba65e315303fd488e8f79e3c4d7bae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 124}
+  - name: WALLS_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 148
+      width: 16
+      height: 16
+    spriteID: 347c2bff0a27d5a439213d1a61a64cb2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 148}
+  - name: WALLS_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 172
+      width: 16
+      height: 16
+    spriteID: fd3e3b2f21ee82c4ba54e9c682814b57
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 172}
+  - name: WALLS_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 196
+      width: 16
+      height: 16
+    spriteID: ac14e480e66bcb0448680e02966d2cbb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 196}
+  - name: WALLS_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 220
+      width: 16
+      height: 16
+    spriteID: 258951ede1196a0449720fc62568f90c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 220}
+  - name: WALLS_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 4
+      width: 16
+      height: 16
+    spriteID: a5c1fea750a3820449b431a8b25fd927
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 4}
+  - name: WALLS_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 28
+      width: 16
+      height: 16
+    spriteID: b7df81e45d24cc344bcd944d066d5f52
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 28}
+  - name: WALLS_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 52
+      width: 16
+      height: 16
+    spriteID: b9cca30f239d16041b90764c91524c33
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 52}
+  - name: WALLS_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 76
+      width: 16
+      height: 16
+    spriteID: 2f5bb62dd33f5de489a35a42d8d090bc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 76}
+  - name: WALLS_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 100
+      width: 16
+      height: 16
+    spriteID: 932a85c2f7731f64bb64a09269925533
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 100}
+  - name: WALLS_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 172
+      y: 4
+      width: 16
+      height: 12
+    spriteID: 6231fa6f2356ae0468bc29d6ba5bda04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 172, y: 0}
+  - name: WALLS_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 124
+      width: 16
+      height: 16
+    spriteID: 2e1e1d71587f70b49aafd9c1fe02b4e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 124}
+  - name: WALLS_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 148
+      width: 16
+      height: 16
+    spriteID: ae6323c13475f4f4eae94c58e09b2a17
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 148}
+  - name: WALLS_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 172
+      width: 16
+      height: 16
+    spriteID: 41c7862c05488784493c0d7940f1d805
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 172}
+  - name: WALLS_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 196
+      width: 16
+      height: 16
+    spriteID: 40fd2c95babe226468b4bbb42f7984ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 196}
   asepriteLayers:
   - layerIndex: 0
     uuid:
@@ -1244,7 +1790,7 @@ ScriptedImporter:
         width: 12
         height: 5
       tileIndices: 0000000001000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000003000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d00000000000000000000000e0000000f0000001000000010000000110000001200000013000000140000001500000000000000000000000000000016000000160000001600000016000000160000001700000018000000190000001a000000000000000000000000000000
-    tileSetIndex: 1
+    tileSetIndex: 2
     parentIndex: -1
   tileSets:
   - id: 0
@@ -1567,6 +2113,169 @@ ScriptedImporter:
       name: walls_26
       spriteId: da07a223a07970d438d06e38d9437e63
     guid: -614402416
+  - id: 2
+    name: WALLS
+    tileSize:
+      x: 16
+      y: 16
+    tiles:
+    - tileId: 1
+      size:
+        x: 16
+        y: 16
+      name: WALLS_1
+      spriteId: ba066558dff6545499001bc4392d8205
+    - tileId: 2
+      size:
+        x: 16
+        y: 16
+      name: WALLS_2
+      spriteId: 7e978b3d11f09464f9d943b98d42267b
+    - tileId: 3
+      size:
+        x: 16
+        y: 16
+      name: WALLS_3
+      spriteId: 9bcc11b9032cc5b4b965971758cdf700
+    - tileId: 4
+      size:
+        x: 16
+        y: 16
+      name: WALLS_4
+      spriteId: 641b618b3019fda4eada6b8e0245dba8
+    - tileId: 5
+      size:
+        x: 16
+        y: 16
+      name: WALLS_5
+      spriteId: fc7fdd95ab7fff44f921d4b5b4c154d8
+    - tileId: 6
+      size:
+        x: 16
+        y: 16
+      name: WALLS_6
+      spriteId: 7321e37e0acce2843901f4efcb8108c0
+    - tileId: 7
+      size:
+        x: 16
+        y: 16
+      name: WALLS_7
+      spriteId: 5d79416e9725c4841ae3539d354ca0d9
+    - tileId: 8
+      size:
+        x: 16
+        y: 16
+      name: WALLS_8
+      spriteId: 506d237595103fe4f98bd3298c553538
+    - tileId: 9
+      size:
+        x: 16
+        y: 16
+      name: WALLS_9
+      spriteId: be45abb45662558498c5811c9a29f8cb
+    - tileId: 10
+      size:
+        x: 16
+        y: 16
+      name: WALLS_10
+      spriteId: 4feac20a652b4494a8ebc92f79f3b1cc
+    - tileId: 11
+      size:
+        x: 16
+        y: 16
+      name: WALLS_11
+      spriteId: 56008bf2b2432e144b45a6754a9ee1dc
+    - tileId: 12
+      size:
+        x: 16
+        y: 16
+      name: WALLS_12
+      spriteId: 02ba65e315303fd488e8f79e3c4d7bae
+    - tileId: 13
+      size:
+        x: 16
+        y: 16
+      name: WALLS_13
+      spriteId: 347c2bff0a27d5a439213d1a61a64cb2
+    - tileId: 14
+      size:
+        x: 16
+        y: 16
+      name: WALLS_14
+      spriteId: fd3e3b2f21ee82c4ba54e9c682814b57
+    - tileId: 15
+      size:
+        x: 16
+        y: 16
+      name: WALLS_15
+      spriteId: ac14e480e66bcb0448680e02966d2cbb
+    - tileId: 16
+      size:
+        x: 16
+        y: 16
+      name: WALLS_16
+      spriteId: 258951ede1196a0449720fc62568f90c
+    - tileId: 17
+      size:
+        x: 16
+        y: 16
+      name: WALLS_17
+      spriteId: a5c1fea750a3820449b431a8b25fd927
+    - tileId: 18
+      size:
+        x: 16
+        y: 16
+      name: WALLS_18
+      spriteId: b7df81e45d24cc344bcd944d066d5f52
+    - tileId: 19
+      size:
+        x: 16
+        y: 16
+      name: WALLS_19
+      spriteId: b9cca30f239d16041b90764c91524c33
+    - tileId: 20
+      size:
+        x: 16
+        y: 16
+      name: WALLS_20
+      spriteId: 2f5bb62dd33f5de489a35a42d8d090bc
+    - tileId: 21
+      size:
+        x: 16
+        y: 16
+      name: WALLS_21
+      spriteId: 932a85c2f7731f64bb64a09269925533
+    - tileId: 22
+      size:
+        x: 16
+        y: 16
+      name: WALLS_22
+      spriteId: 6231fa6f2356ae0468bc29d6ba5bda04
+    - tileId: 23
+      size:
+        x: 16
+        y: 16
+      name: WALLS_23
+      spriteId: 2e1e1d71587f70b49aafd9c1fe02b4e0
+    - tileId: 24
+      size:
+        x: 16
+        y: 16
+      name: WALLS_24
+      spriteId: ae6323c13475f4f4eae94c58e09b2a17
+    - tileId: 25
+      size:
+        x: 16
+        y: 16
+      name: WALLS_25
+      spriteId: 41c7862c05488784493c0d7940f1d805
+    - tileId: 26
+      size:
+        x: 16
+        y: 16
+      name: WALLS_26
+      spriteId: 40fd2c95babe226468b4bbb42f7984ca
+    guid: 484204595
   platformSettings:
   - name: DefaultTexturePlatform
     overridden: 0
@@ -1596,4 +2305,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 192, y: 112}
-  previousTextureSize: {x: 128, y: 256}
+  previousTextureSize: {x: 256, y: 256}
