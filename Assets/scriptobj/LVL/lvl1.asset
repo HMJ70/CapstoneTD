@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: lvl1
   m_EditorClassIdentifier: 
   lvlname: Level 1
-  wavestowin: 6
+  wavestowin: 1
   startingcoins: 200
   startingHP: 10

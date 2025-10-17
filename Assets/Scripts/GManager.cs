@@ -22,6 +22,7 @@ public class GManager : MonoBehaviour
         else
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
     private void OnEnable()
@@ -87,6 +88,9 @@ public class GManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        resetgame();
+        if (lvlmanager.instance != null && lvlmanager.instance.currlvl != null)
+        {
+            resetgame();
+        }
     }
 }

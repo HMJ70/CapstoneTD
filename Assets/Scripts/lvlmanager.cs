@@ -19,7 +19,6 @@ public class lvlmanager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        currlvl = alllevels[0];
     }
 
     public void loadlevel(LVLData lvldata)
