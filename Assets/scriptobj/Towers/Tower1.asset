@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Tower1
   m_EditorClassIdentifier: 
   range: 3.5
-  attackdelay: 0.7
+  attackdelay: 0.5
   bulletspeed: 10
   bulletduration: 2
   bulletsize: 1
   dmg: 1
   price: 50
-  sprite: {fileID: -3515738341154152859, guid: 30077e23f5e166549875751c27850daf, type: 3}
+  sprite: {fileID: -1996767767764765200, guid: 25005ef5b39acc7439718158f2eeeb77, type: 3}
   prefab: {fileID: 8985160936646698667, guid: f0d1d3f95cfd84143b77ae06c238b5af, type: 3}
+  isTackShooter: 0
+  tackCount: 8
+  tackSpread: 360

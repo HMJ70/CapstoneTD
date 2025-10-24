@@ -17,9 +17,9 @@ MonoBehaviour:
   bulletspeed: 8
   bulletduration: 0.15
   bulletsize: 1
-  dmg: 3
-  price: 50
-  sprite: {fileID: 7057657135161693371, guid: 30077e23f5e166549875751c27850daf, type: 3}
+  dmg: 1
+  price: 75
+  sprite: {fileID: -1996767767764765200, guid: 25005ef5b39acc7439718158f2eeeb77, type: 3}
   prefab: {fileID: 8985160936646698667, guid: 030debefb138e1b44988ceb686f3e6dc, type: 3}
   isTackShooter: 1
   tackCount: 8

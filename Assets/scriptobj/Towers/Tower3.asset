@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fd011df7a228b41be97c0f25dd8f55, type: 3}
   m_Name: Tower3
   m_EditorClassIdentifier: 
-  range: 3
-  attackdelay: 1
-  bulletspeed: 4
+  range: 5
+  attackdelay: 2
+  bulletspeed: 20
   bulletduration: 3
   bulletsize: 2
-  dmg: 3
+  dmg: 5
   price: 100
   sprite: {fileID: 5461389763933411275, guid: 30077e23f5e166549875751c27850daf, type: 3}
   prefab: {fileID: 8985160936646698667, guid: d64fd0f4d31a52b4fa75fa7d83617d76, type: 3}
-  isMelee: 1
-  meleeDamage: 0
+  isTackShooter: 0
+  tackCount: 8
+  tackSpread: 360
