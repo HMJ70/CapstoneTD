@@ -43,6 +43,7 @@ public class UI : MonoBehaviour
     [Header("Gameplay")]
     [SerializeField] private TowerDatas[] towers;
 
+    private bool inGameScene = false;
     private bool isgamepaused = false;
     private List<GameObject> activeCards = new List<GameObject>();
     private Platforms currplatform;
@@ -92,6 +93,7 @@ public class UI : MonoBehaviour
 
     private void Update()
     {
+        if (!inGameScene) return;
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
             TogglePause();
     }
@@ -265,9 +267,13 @@ public class UI : MonoBehaviour
         HidePanels();
 
         if (scene.name == "MainMenu")
+        {
+            inGameScene = false;
             HideUI();
+        }
         else
         {
+            inGameScene = true;
             ShowUI();
             StartCoroutine(ShowObjective());
         }
