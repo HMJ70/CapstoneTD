@@ -19,7 +19,7 @@ MonoBehaviour:
   bulletsize: 1
   dmg: 1
   price: 75
-  sprite: {fileID: 8821016199925446121, guid: a2a6147b15e2e2041890b96b5f4d8808, type: 3}
+  sprite: {fileID: -8493370585025556101, guid: 6bde183be527e3c4d97ebad19ba764b1, type: 3}
   prefab: {fileID: 8985160936646698667, guid: 030debefb138e1b44988ceb686f3e6dc, type: 3}
   isTackShooter: 1
   tackCount: 8
