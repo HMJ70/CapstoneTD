@@ -4,7 +4,21 @@ using UnityEditor;
 public class Pathway : MonoBehaviour
 {
     public GameObject[] WayP;
+    private LineRenderer line;
+    private void Awake()
+    {
+        line = GetComponent<LineRenderer>();
+        line.positionCount = WayP.Length;
+        for (int i = 0; i < WayP.Length; i++)
+        {
+            line.SetPosition(i, WayP[i].transform.position);
+        }
+    }
 
+    private void Update()
+    {
+        line.material.mainTextureOffset -= new Vector2(Time.deltaTime * 0.1f, 0);
+    }
     public Vector3 GetPos(int index)
     {
         return WayP[index].transform.position;

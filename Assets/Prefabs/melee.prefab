@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8245735641924810651}
   - component: {fileID: 6807232668782133401}
+  - component: {fileID: 8566304604133009064}
+  - component: {fileID: 3220625074059673631}
   m_Layer: 0
   m_Name: towersprite
   m_TagString: Untagged
@@ -90,6 +92,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8566304604133009064
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435070956379858097}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cadd1d3af536b0148b575a07ed396413, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3220625074059673631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435070956379858097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b873b70cea7e1fa48a236ac16a30b39c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowerSpriteEvents
+  towerParent: {fileID: 4664849594742565650}
 --- !u!1 &8985160936646698667
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,8 +138,8 @@ GameObject:
   - component: {fileID: 28670803115751723}
   - component: {fileID: 8845403503533695442}
   - component: {fileID: 5816883110583341610}
-  - component: {fileID: 6481247365409529203}
-  - component: {fileID: 2606960125777598073}
+  - component: {fileID: 7471874721135722311}
+  - component: {fileID: 4664849594742565650}
   m_Layer: 0
   m_Name: melee
   m_TagString: Untagged
@@ -220,7 +257,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.09
---- !u!114 &6481247365409529203
+--- !u!114 &7471874721135722311
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -234,7 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Prefab: {fileID: 401413601360945629, guid: 28872e3b2655b0742bcb9813c473cdb3, type: 3}
   PSize: 5
---- !u!114 &2606960125777598073
+--- !u!114 &4664849594742565650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -249,3 +286,4 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 36e091e54e2ad004f83094a7c85e6041, type: 2}
   tackCount: 8
   tackSpread: 360
+  animator: {fileID: 8566304604133009064}

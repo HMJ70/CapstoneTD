@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using System.Collections.Generic;
 
 public class MeleeTower : MonoBehaviour
@@ -12,6 +12,9 @@ public class MeleeTower : MonoBehaviour
     [SerializeField] private int tackCount = 8;
     [SerializeField] private float tackSpread = 360f;
 
+    [Header("Animation")]
+    [SerializeField] private Animator animator;
+
     private CircleCollider2D rangeCollider;
     private List<Enemies> enemiesInRange = new List<Enemies>();
 
@@ -20,12 +23,12 @@ public class MeleeTower : MonoBehaviour
         bulletpool = GetComponent<ObjPool>();
         shootTimer = data.attackdelay;
 
-        // Make sure there’s a trigger collider for range detection
+        if (animator == null)
+            animator = GetComponent<Animator>();
+
         rangeCollider = GetComponent<CircleCollider2D>();
         if (rangeCollider == null)
-        {
             rangeCollider = gameObject.AddComponent<CircleCollider2D>();
-        }
 
         rangeCollider.isTrigger = true;
         rangeCollider.radius = data.range;
@@ -33,12 +36,10 @@ public class MeleeTower : MonoBehaviour
 
     private void Update()
     {
-        // Don’t shoot if there’s no target in range
         enemiesInRange.RemoveAll(e => e == null || !e.gameObject.activeInHierarchy);
         if (enemiesInRange.Count == 0)
             return;
 
-        // Normal shooting logic
         shootTimer -= Time.deltaTime;
         if (shootTimer <= 0f)
         {
@@ -48,6 +49,14 @@ public class MeleeTower : MonoBehaviour
     }
 
     private void ShootBurst()
+    {
+        // Play the attack animation, but don't shoot yet
+        if (animator != null)
+            animator.SetTrigger("Attack");
+    }
+
+    // Called from the animation event at the moment of impact
+    public void Fire()
     {
         float angleStep = tackSpread / tackCount;
         float currentAngle = 0f;
@@ -64,6 +73,7 @@ public class MeleeTower : MonoBehaviour
             currentAngle += angleStep;
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
