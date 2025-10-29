@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8245735641924810651}
   - component: {fileID: 6807232668782133401}
+  - component: {fileID: 1529461032745295100}
   m_Layer: 0
   m_Name: towersprite
   m_TagString: Untagged
@@ -90,6 +91,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1529461032745295100
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435070956379858097}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b3147054d95560f4cb0e08c5649781ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8985160936646698667
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 9b8b7e7cd2b9b324288d1b0173151ef2, type: 2}
+  animator: {fileID: 1529461032745295100}
 --- !u!58 &5816883110583341610
 CircleCollider2D:
   m_ObjectHideFlags: 0

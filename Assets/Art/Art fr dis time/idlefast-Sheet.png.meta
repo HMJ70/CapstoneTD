@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 6c59526e19cf08f47b8af147e19c5a33
+guid: 39f1291d771c2474981fac3b00d2b71d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6410831735505670566
-    second: Golemfromidle-Sheet_0
+      213: 5265480280224812965
+    second: idlefast-Sheet_0
   - first:
-      213: 6947741016989875328
-    second: Golemfromidle-Sheet_1
+      213: 6045137234046454107
+    second: idlefast-Sheet_1
   - first:
-      213: 5007663509074732848
-    second: Golemfromidle-Sheet_2
+      213: 1389604174614257851
+    second: idlefast-Sheet_2
   - first:
-      213: -3621114456598649436
-    second: Golemfromidle-Sheet_3
+      213: -8073336875801075286
+    second: idlefast-Sheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,89 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Golemfromidle-Sheet_0
+      name: idlefast-Sheet_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 12
-        width: 53
-        height: 41
+        x: 3
+        y: 3
+        width: 48
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5e226aa0862807a0800000000000000
-      internalID: -6410831735505670566
+      spriteID: 5afcf9aca6eb21940800000000000000
+      internalID: 5265480280224812965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Golemfromidle-Sheet_1
+      name: idlefast-Sheet_1
       rect:
         serializedVersion: 2
-        x: 66
-        y: 12
-        width: 53
-        height: 39
+        x: 63
+        y: 3
+        width: 46
+        height: 33
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08cb71de4a55b6060800000000000000
-      internalID: 6947741016989875328
+      spriteID: b5983dd2944a4e350800000000000000
+      internalID: 6045137234046454107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Golemfromidle-Sheet_2
+      name: idlefast-Sheet_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 12
-        width: 53
-        height: 37
+        x: 121
+        y: 3
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 037e5150e6bce7540800000000000000
-      internalID: 5007663509074732848
+      spriteID: bb0684662add84310800000000000000
+      internalID: 1389604174614257851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Golemfromidle-Sheet_3
+      name: idlefast-Sheet_3
       rect:
         serializedVersion: 2
-        x: 190
-        y: 12
-        width: 53
-        height: 39
+        x: 180
+        y: 3
+        width: 48
+        height: 33
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4a5e76356973fbdc0800000000000000
-      internalID: -3621114456598649436
+      spriteID: aa1a0d5c2eeb5ff80800000000000000
+      internalID: -8073336875801075286
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a10c9f711c432394ab690e9d144795f9
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -221,14 +221,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Golemfromidle-Sheet_0: -6410831735505670566
-      Golemfromidle-Sheet_1: 6947741016989875328
-      Golemfromidle-Sheet_2: 5007663509074732848
-      Golemfromidle-Sheet_3: -3621114456598649436
+      idlefast-Sheet_0: 5265480280224812965
+      idlefast-Sheet_1: 6045137234046454107
+      idlefast-Sheet_2: 1389604174614257851
+      idlefast-Sheet_3: -8073336875801075286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

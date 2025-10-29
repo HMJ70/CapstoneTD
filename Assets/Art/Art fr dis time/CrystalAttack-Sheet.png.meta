@@ -1,19 +1,52 @@
 fileFormatVersion: 2
-guid: 6c59526e19cf08f47b8af147e19c5a33
+guid: b8f5ac6dfe5534e4a9f0e62a9941d02a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6410831735505670566
-    second: Golemfromidle-Sheet_0
+      213: -4682060460399984979
+    second: CrystalAttack-Sheet_0
   - first:
-      213: 6947741016989875328
-    second: Golemfromidle-Sheet_1
+      213: -6314993884773906964
+    second: CrystalAttack-Sheet_1
   - first:
-      213: 5007663509074732848
-    second: Golemfromidle-Sheet_2
+      213: -5985082269700361178
+    second: CrystalAttack-Sheet_2
   - first:
-      213: -3621114456598649436
-    second: Golemfromidle-Sheet_3
+      213: -2020038791312509554
+    second: CrystalAttack-Sheet_3
+  - first:
+      213: 6165535547930896715
+    second: CrystalAttack-Sheet_4
+  - first:
+      213: -5551148227421121628
+    second: CrystalAttack-Sheet_5
+  - first:
+      213: 8673687698010445205
+    second: CrystalAttack-Sheet_6
+  - first:
+      213: 4942548603697704830
+    second: CrystalAttack-Sheet_7
+  - first:
+      213: 5978478711237115225
+    second: CrystalAttack-Sheet_8
+  - first:
+      213: -5081658876854987842
+    second: CrystalAttack-Sheet_9
+  - first:
+      213: 4594228537732505179
+    second: CrystalAttack-Sheet_10
+  - first:
+      213: -7640890006040886273
+    second: CrystalAttack-Sheet_11
+  - first:
+      213: 8216047986926942286
+    second: CrystalAttack-Sheet_12
+  - first:
+      213: 8973145157607881626
+    second: CrystalAttack-Sheet_13
+  - first:
+      213: 3436293114530534623
+    second: CrystalAttack-Sheet_14
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,13 +155,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Golemfromidle-Sheet_0
+      name: CrystalAttack-Sheet_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 12
-        width: 53
-        height: 41
+        x: 7
+        y: 6
+        width: 55
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +170,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5e226aa0862807a0800000000000000
-      internalID: -6410831735505670566
+      spriteID: daef4f061daf50fb0800000000000000
+      internalID: -4682060460399984979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Golemfromidle-Sheet_1
+      name: CrystalAttack-Sheet_1
       rect:
         serializedVersion: 2
-        x: 66
-        y: 12
+        x: 78
+        y: 6
         width: 53
-        height: 39
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08cb71de4a55b6060800000000000000
-      internalID: 6947741016989875328
+      spriteID: ce589432582ac58a0800000000000000
+      internalID: -6314993884773906964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Golemfromidle-Sheet_2
+      name: CrystalAttack-Sheet_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 12
+        x: 148
+        y: 6
         width: 53
-        height: 37
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 037e5150e6bce7540800000000000000
-      internalID: 5007663509074732848
+      spriteID: 6247503d267b0fca0800000000000000
+      internalID: -5985082269700361178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Golemfromidle-Sheet_3
+      name: CrystalAttack-Sheet_3
       rect:
         serializedVersion: 2
-        x: 190
-        y: 12
-        width: 53
-        height: 39
+        x: 212
+        y: 3
+        width: 65
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +236,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4a5e76356973fbdc0800000000000000
-      internalID: -3621114456598649436
+      spriteID: e85fe430c6167f3e0800000000000000
+      internalID: -2020038791312509554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalAttack-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1
+        width: 67
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a35601391c56f2b0800000000000000
+      internalID: -5551148227421121628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalAttack-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 3
+        width: 68
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff3c91ec50b16f590800000000000000
+      internalID: -7640890006040886273
       vertices: []
       indices: 
       edges: []
@@ -213,7 +290,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a10c9f711c432394ab690e9d144795f9
+    spriteID: 4706543c5d242834f829fadac4771d0a
     internalID: 0
     vertices: []
     indices: 
@@ -221,14 +298,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Golemfromidle-Sheet_0: -6410831735505670566
-      Golemfromidle-Sheet_1: 6947741016989875328
-      Golemfromidle-Sheet_2: 5007663509074732848
-      Golemfromidle-Sheet_3: -3621114456598649436
+      CrystalAttack-Sheet_0: -4682060460399984979
+      CrystalAttack-Sheet_1: -6314993884773906964
+      CrystalAttack-Sheet_10: 4594228537732505179
+      CrystalAttack-Sheet_11: -7640890006040886273
+      CrystalAttack-Sheet_12: 8216047986926942286
+      CrystalAttack-Sheet_13: 8973145157607881626
+      CrystalAttack-Sheet_14: 3436293114530534623
+      CrystalAttack-Sheet_2: -5985082269700361178
+      CrystalAttack-Sheet_3: -2020038791312509554
+      CrystalAttack-Sheet_4: 6165535547930896715
+      CrystalAttack-Sheet_5: -5551148227421121628
+      CrystalAttack-Sheet_6: 8673687698010445205
+      CrystalAttack-Sheet_7: 4942548603697704830
+      CrystalAttack-Sheet_8: 5978478711237115225
+      CrystalAttack-Sheet_9: -5081658876854987842
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
