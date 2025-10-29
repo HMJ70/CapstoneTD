@@ -367,7 +367,6 @@ public class UI : MonoBehaviour
         int nextindex = currindex + 1;
         if (nextindex < levelmanager.alllevels.Length)
         {
-            missioncomplete.SetActive(false);
             levelmanager.loadlevel(levelmanager.alllevels[nextindex]);
         }
     }

@@ -61,6 +61,7 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         OnWchanged?.Invoke(CountW);
+        Audiomanage.instance.playsound(currwave.wavespawnclip);
     }
     void Update()
     {
@@ -69,18 +70,15 @@ public class EnemySpawner : MonoBehaviour
             WCooldown -= Time.deltaTime;
             if(WCooldown <= 0f )
             {
-                if(CountW + 1 >= lvlmanager.instance.currlvl.wavestowin && !isendlessmode)
-                {
-                    Onmissioncomplete?.Invoke();
-                    return;
-                }
+                
 
                 currwaveindex = (currwaveindex + 1) % waves.Length;
                 CountW++;
                 OnWchanged?.Invoke(CountW);
+                Audiomanage.instance.playsound(currwave.wavespawnclip);
                 SCounter = 0;
                 ERemoved = 0;
-                STime = 0f;// can be set to zero =0f; for instant or currwave.Sinterval
+                STime = currwave.Sinterval;// can be set to zero =0f; for instant or currwave.Sinterval
                 isbetweenW = false;
             }
         }
@@ -95,8 +93,16 @@ public class EnemySpawner : MonoBehaviour
             }
             else if (SCounter >= currwave.EperWave && ERemoved >= currwave.EperWave)
             {
-                isbetweenW = true;
-                WCooldown = WDelay;
+                if (CountW + 1 >= lvlmanager.instance.currlvl.wavestowin && !isendlessmode)
+                {
+                    Onmissioncomplete?.Invoke();
+                }
+                else
+                {
+                    isbetweenW = true;
+                    WCooldown = WDelay;
+                }
+                    
             }
         }
     }
@@ -107,7 +113,7 @@ public class EnemySpawner : MonoBehaviour
         {
             GameObject SpawnedObj = pool.GetPObj();
             SpawnedObj.transform.position = transform.position;
-            float hpmultiplier = 1f + (CountW * 0.1f); //10%health increase bruh
+            float hpmultiplier = 1f + (CountW * 0.5f); //10%health increase bruh
             Enemies enemies = SpawnedObj.GetComponent<Enemies>();
             enemies.Initialize(hpmultiplier);
             SpawnedObj.SetActive(true);

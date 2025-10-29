@@ -24,3 +24,4 @@ MonoBehaviour:
   isTackShooter: 0
   tackCount: 8
   tackSpread: 360
+  attacksound: {fileID: 8300000, guid: 249e241f05cf2d44ea797d435bd49ebe, type: 3}

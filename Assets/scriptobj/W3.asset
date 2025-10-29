@@ -15,3 +15,4 @@ MonoBehaviour:
   Etype: 2
   Sinterval: 1
   EperWave: 15
+  wavespawnclip: {fileID: 8300000, guid: 53ab434ab21206a47af38e0bdf185965, type: 3}

@@ -21,3 +21,7 @@ MonoBehaviour:
   price: 75
   sprite: {fileID: 4807368976079870889, guid: 30077e23f5e166549875751c27850daf, type: 3}
   prefab: {fileID: 8985160936646698667, guid: 5dd6bdaf0613cd94f984729cbd40dc7e, type: 3}
+  isTackShooter: 0
+  tackCount: 8
+  tackSpread: 360
+  attacksound: {fileID: 8300000, guid: 23193960e3ae60e4c9888ccac539273d, type: 3}

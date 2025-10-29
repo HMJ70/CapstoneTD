@@ -17,7 +17,8 @@ public class TowerDatas : ScriptableObject
     public GameObject prefab;
 
     [Header("Optional: Tack Shooter Settings")]
-    public bool isTackShooter = false; // determines if this uses burst logic
-    public int tackCount = 8;          // how many projectiles per burst
-    public float tackSpread = 360f;    // full circle by default
+    public bool isTackShooter = false; 
+    public int tackCount = 8;         
+    public float tackSpread = 360f;    
+
 }
