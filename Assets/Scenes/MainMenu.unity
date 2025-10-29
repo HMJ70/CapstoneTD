@@ -380,7 +380,7 @@ Transform:
   m_GameObject: {fileID: 69526158}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.68, y: -3.72, z: 0}
+  m_LocalPosition: {x: 1.68, y: -3.82, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10770,7 +10770,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2098553574
+--- !u!1 &2082355577
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10778,9 +10778,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2098553577}
-  - component: {fileID: 2098553576}
-  - component: {fileID: 2098553575}
+  - component: {fileID: 2082355580}
+  - component: {fileID: 2082355579}
+  - component: {fileID: 2082355578}
   m_Layer: 0
   m_Name: vampidle-Sheet_0
   m_TagString: Untagged
@@ -10788,14 +10788,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &2098553575
+--- !u!95 &2082355578
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098553574}
+  m_GameObject: {fileID: 2082355577}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 9a31e0763fda50246a5a886b6b059b2e, type: 2}
@@ -10810,13 +10810,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!212 &2098553576
+--- !u!212 &2082355579
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098553574}
+  m_GameObject: {fileID: 2082355577}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -10862,22 +10862,22 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.17, y: 0.3}
+  m_Size: {x: 0.15, y: 0.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &2098553577
+--- !u!4 &2082355580
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098553574}
+  m_GameObject: {fileID: 2082355577}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.33, y: -4.61, z: 0}
+  m_LocalPosition: {x: -6.1, y: -2.9184494, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10900,6 +10900,6 @@ SceneRoots:
   - {fileID: 1725906910}
   - {fileID: 1895772023}
   - {fileID: 725935531}
-  - {fileID: 2098553577}
   - {fileID: 534820103}
   - {fileID: 69526161}
+  - {fileID: 2082355580}
