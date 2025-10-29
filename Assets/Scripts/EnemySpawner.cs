@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     public static EnemySpawner Instance { get; private set; }
     public static event Action<int> OnWchanged;
     public static event Action Onmissioncomplete;
-    [SerializeField] private WData[] waves;
+    private WData[] waves => lvlmanager.instance.currlvl.waves;
 
     private int CountW = 0;
     private int currwaveindex = 0;

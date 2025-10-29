@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 3
   dmg: 1
-  speed: 3
+  minspeed: 2
+  maxspeed: 2.5
   Eloot: 5

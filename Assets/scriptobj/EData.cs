@@ -5,6 +5,7 @@ public class EData : ScriptableObject
 {
     public float hp;
     public int dmg;
-    public float speed;
+    public float minspeed;
+    public float maxspeed;
     public float Eloot;
 }

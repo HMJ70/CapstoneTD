@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39fa062dee7b42a4c9f570ff46ef0946, type: 3}
-  m_Name: W2
+  m_Name: vamps
   m_EditorClassIdentifier: 
-  Etype: 1
-  Sinterval: 0.5
-  EperWave: 10
-  wavespawnclip: {fileID: 8300000, guid: 53ab434ab21206a47af38e0bdf185965, type: 3}
+  Etype: 0
+  Sinterval: 0.8
+  EperWave: 5
+  wavespawnclip: {fileID: 8300000, guid: e3e266f76101235489cca9f2b1f02a5f, type: 3}

@@ -7,5 +7,6 @@ public class LVLData : ScriptableObject
     public int wavestowin;
     public int startingcoins;
     public int startingHP;
-    //public AudioClip backgroundMusic;
+
+    public WData[] waves;
 }

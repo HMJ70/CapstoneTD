@@ -16,6 +16,8 @@ public class Enemies : MonoBehaviour
     private float HP;
 
     private float maxhp;
+    private float speed;
+    private Vector3 offset;
 
     [SerializeField] private Transform hpbar;
     private Vector3 hpbarog;
@@ -31,13 +33,13 @@ public class Enemies : MonoBehaviour
     private void OnEnable()
     {
         currWayP = 0;
-        targetPlace = currpathway.GetPos(currWayP);
+        targetPlace = currpathway.GetPos(currWayP) + offset;
     }
 
     void Update()
     {
         if (counted) return;
-        transform.position = Vector3.MoveTowards(transform.position, targetPlace, data.speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetPlace, speed * Time.deltaTime);
 
         float roughlength = (transform.position - targetPlace).magnitude;
         if (roughlength < 0.1f )
@@ -45,7 +47,7 @@ public class Enemies : MonoBehaviour
             if(currWayP < currpathway.WayP.Length - 1)
             {
                 currWayP++;
-                targetPlace = currpathway.GetPos(currWayP);
+                targetPlace = currpathway.GetPos(currWayP) + offset;
             }
             else
             {
@@ -86,6 +88,10 @@ public class Enemies : MonoBehaviour
         maxhp = data.hp * hpmult;
         HP = maxhp;
         hpbarchange();
+        speed = UnityEngine.Random.Range(data.minspeed, data.maxspeed);
+        float offsetX = UnityEngine.Random.Range(-0.5f,0.5f);
+        float offsetY = UnityEngine.Random.Range(-0.5f, 0.5f);
+        offset = new Vector2(offsetX, offsetY);
     }
 
 
