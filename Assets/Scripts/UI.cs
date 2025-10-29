@@ -47,7 +47,7 @@ public class UI : MonoBehaviour
     private bool isgamepaused = false;
     private List<GameObject> activeCards = new List<GameObject>();
     private Platforms currplatform;
-
+    private bool missioncompletedsoundplayed = false;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -83,9 +83,21 @@ public class UI : MonoBehaviour
 
     private void Start()
     {
-        speed1.onClick.AddListener(() => SetGameSpeed(0.5f));
-        speed2.onClick.AddListener(() => SetGameSpeed(1f));
-        speed3.onClick.AddListener(() => SetGameSpeed(2f));
+        speed1.onClick.AddListener(() =>
+        {
+            SetGameSpeed(0.5f);
+            Audiomanage.instance.playspeedslow();
+        });
+        speed2.onClick.AddListener(() =>
+        {
+            SetGameSpeed(1f);
+            Audiomanage.instance.playspeednormal();
+        });
+        speed3.onClick.AddListener(() =>
+        {
+            SetGameSpeed(2f);
+            Audiomanage.instance.playspeedfast();
+        });
 
         if (GManager.instance != null)
             HighlightSelectedSpeedButton(GManager.instance.Gamespeed);
@@ -131,6 +143,7 @@ public class UI : MonoBehaviour
         Platforms.Tpanelopen = true;
         GManager.instance.SetTimeScale(0f);
         PopulateTCards();
+        Audiomanage.instance.playpanel();
     }
 
     public void HideTPanel()
@@ -170,6 +183,7 @@ public class UI : MonoBehaviour
 
         if (GManager.instance.loots >= towerDatas.price)
         {
+            Audiomanage.instance.playtowerplaced();
             GManager.instance.spendmoney(towerDatas.price);
             currplatform.PlaceTower(towerDatas);
         }
@@ -185,6 +199,7 @@ public class UI : MonoBehaviour
     {
         if (Warning == null) yield break;
         Warning.text = message;
+        Audiomanage.instance.playwarning();
         Warning.gameObject.SetActive(true);
         yield return new WaitForSecondsRealtime(3f);
         Warning.gameObject.SetActive(false);
@@ -222,12 +237,14 @@ public class UI : MonoBehaviour
             if (pausemenu != null) pausemenu.SetActive(false);
             isgamepaused = false;
             GManager.instance.SetTimeScale(GManager.instance.Gamespeed);
+            Audiomanage.instance.playresume();
         }
         else
         {
             if (pausemenu != null) pausemenu.SetActive(true);
             isgamepaused = true;
             GManager.instance.SetTimeScale(0f);
+            Audiomanage.instance.playpause();
         }
     }
 
@@ -248,6 +265,7 @@ public class UI : MonoBehaviour
     {
         GManager.instance.SetTimeScale(0f);
         if (gameover != null) gameover.SetActive(true);
+        Audiomanage.instance.playgameover();
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -265,6 +283,7 @@ public class UI : MonoBehaviour
             canvas.worldCamera = maincam;
 
         HidePanels();
+        missioncompletedsoundplayed = false;
 
         if (scene.name == "MainMenu")
         {
@@ -290,10 +309,15 @@ public class UI : MonoBehaviour
 
     private void ShowMissionComplete()
     {
-        updatenextlvlbutton();
-        if (missioncomplete == null) return;
-        missioncomplete.SetActive(true);
-        GManager.instance.SetTimeScale(0f);
+        if (!missioncompletedsoundplayed)
+        {
+            updatenextlvlbutton();
+            if (missioncomplete == null) return;
+            missioncomplete.SetActive(true);
+            GManager.instance.SetTimeScale(0f);
+            Audiomanage.instance.playmissioncomplete();
+            missioncompletedsoundplayed = true;
+        }
     }
 
     public void EnterEndlessMode()
@@ -328,7 +352,7 @@ public class UI : MonoBehaviour
         HighlightSelectedSpeedButton(GManager.instance.Gamespeed);
         if (pause != null) pause.gameObject.SetActive(true);
     }
-        
+
     private void HidePanels()
     {
         if (pausemenu != null) pausemenu.SetActive(false);
@@ -341,7 +365,7 @@ public class UI : MonoBehaviour
         var levelmanager = lvlmanager.instance;
         int currindex = Array.IndexOf(levelmanager.alllevels, levelmanager.currlvl);
         int nextindex = currindex + 1;
-        if(nextindex < levelmanager.alllevels.Length)
+        if (nextindex < levelmanager.alllevels.Length)
         {
             missioncomplete.SetActive(false);
             levelmanager.loadlevel(levelmanager.alllevels[nextindex]);

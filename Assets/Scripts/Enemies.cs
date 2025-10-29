@@ -65,6 +65,7 @@ public class Enemies : MonoBehaviour
         hpbarchange();
         if (HP <= 0)
         {
+            Audiomanage.instance.playenemykilled();
             counted = true;
             OnEnemyKilled?.Invoke(this);
             gameObject.SetActive(false);
