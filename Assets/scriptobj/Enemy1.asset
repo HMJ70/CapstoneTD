@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Enemy1
   m_EditorClassIdentifier: 
   hp: 3
-  dmg: 1
+  dmg: 3
   minspeed: 2
   maxspeed: 2.5
-  Eloot: 5
+  Eloot: 10

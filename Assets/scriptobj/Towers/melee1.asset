@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: melee1
   m_EditorClassIdentifier: Assembly-CSharp::TowerDatas
   range: 1
-  attackdelay: 0.75
+  attackdelay: 0.3
   bulletspeed: 8
   bulletduration: 0.15
   bulletsize: 1
