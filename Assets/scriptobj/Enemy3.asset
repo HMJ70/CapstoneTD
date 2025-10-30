@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7bf50175b2d96447944afc29cab1f8f, type: 3}
   m_Name: Enemy3
   m_EditorClassIdentifier: 
-  hp: 5
+  hp: 10
   dmg: 5
-  minspeed: 1
-  maxspeed: 2
+  minspeed: 0.5
+  maxspeed: 1.5
   Eloot: 15

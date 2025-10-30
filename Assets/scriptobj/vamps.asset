@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: vamps
   m_EditorClassIdentifier: 
   Etype: 0
-  Sinterval: 0.8
-  EperWave: 5
+  Sinterval: 1.25
+  EperWave: 10
   wavespawnclip: {fileID: 8300000, guid: e3e266f76101235489cca9f2b1f02a5f, type: 3}

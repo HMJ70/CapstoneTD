@@ -11,7 +11,7 @@ public class Towers : MonoBehaviour
     private float shootime;
 
     [Header("Animation")]
-    [SerializeField] private Animator animator; // 👈 Added
+    [SerializeField] private Animator animator; 
 
     private void OnEnable()
     {
@@ -32,7 +32,6 @@ public class Towers : MonoBehaviour
         bulletpool = GetComponent<ObjPool>();
         shootime = data.attackdelay;
 
-        // 👇 Automatically get Animator if not manually set
         if (animator == null)
             animator = GetComponent<Animator>();
     }
@@ -79,24 +78,19 @@ public class Towers : MonoBehaviour
 
         if (enemiesinrange.Count > 0)
         {
-            // ✅ Play attack animation
             if (animator != null)
                 animator.SetTrigger("Attack");
 
-            // 👇 Either shoot immediately (simple version)
             FireProjectile();
         }
     }
 
-    // 🔥 Separate shooting logic (optional for animation event)
     public void FireProjectile()
     {
-        // Remove null or inactive enemies
         enemiesinrange.RemoveAll(e => e == null || !e.gameObject.activeInHierarchy);
 
-        // Check if we still have a valid target
         if (enemiesinrange.Count == 0)
-            return; // Nothing to shoot at, safely exit
+            return; 
 
         GameObject Bullet = bulletpool.GetPObj();
         Bullet.transform.position = transform.position;

@@ -13,9 +13,17 @@ MonoBehaviour:
   m_Name: lvl1
   m_EditorClassIdentifier: 
   lvlname: Level 1
-  wavestowin: 1
-  startingcoins: 200
-  startingHP: 10
+  wavestowin: 10
+  startingcoins: 100
+  startingHP: 50
   waves:
   - {fileID: 11400000, guid: 0da365c0bcd02a54084543dd0a4da0ed, type: 2}
   - {fileID: 11400000, guid: cf54131cdcf02704e8611e5b5041582e, type: 2}
+  - {fileID: 11400000, guid: 0da365c0bcd02a54084543dd0a4da0ed, type: 2}
+  - {fileID: 11400000, guid: 0da365c0bcd02a54084543dd0a4da0ed, type: 2}
+  - {fileID: 11400000, guid: cf54131cdcf02704e8611e5b5041582e, type: 2}
+  - {fileID: 11400000, guid: 0da365c0bcd02a54084543dd0a4da0ed, type: 2}
+  - {fileID: 11400000, guid: 0da365c0bcd02a54084543dd0a4da0ed, type: 2}
+  - {fileID: 11400000, guid: cf54131cdcf02704e8611e5b5041582e, type: 2}
+  - {fileID: 11400000, guid: 0da365c0bcd02a54084543dd0a4da0ed, type: 2}
+  - {fileID: 11400000, guid: 49ff78bb363aa5d409c10e8aaaa61049, type: 2}

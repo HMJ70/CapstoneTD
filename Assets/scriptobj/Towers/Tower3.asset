@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Tower3
   m_EditorClassIdentifier: 
   range: 5
-  attackdelay: 2
+  attackdelay: 2.5
   bulletspeed: 20
   bulletduration: 3
   bulletsize: 2
   dmg: 3
-  price: 100
+  price: 125
   sprite: {fileID: -7927549157719269519, guid: e4bb5257891c8ce4eab7ecd881cbc80f, type: 3}
   prefab: {fileID: 8985160936646698667, guid: d64fd0f4d31a52b4fa75fa7d83617d76, type: 3}
   isTackShooter: 0
