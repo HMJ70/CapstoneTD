@@ -30,20 +30,22 @@ public class Platforms : MonoBehaviour
 
     public void PlaceTower(TowerDatas data)
     {
-        SpriteRenderer[] platformRenderers = GetComponentsInChildren<SpriteRenderer>(true); 
+        SpriteRenderer[] platformRenderers = GetComponentsInChildren<SpriteRenderer>(true);
         if (explicitSpriteRenderer != null)
-        {
             explicitSpriteRenderer.enabled = false;
-        }
         else
         {
-           
             foreach (var sr in platformRenderers)
-            {
-               
                 sr.enabled = false;
-            }
         }
+
+        Collider2D platformCollider = GetComponent<Collider2D>();
+        if (platformCollider != null)
+            platformCollider.enabled = false;
+
         GameObject towerGO = Instantiate(data.prefab, transform.position, Quaternion.identity, transform);
+
+        towerGO.name = data.prefab.name;
     }
+
 }

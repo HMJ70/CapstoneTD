@@ -2,39 +2,40 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private TowerDatas datas;
-    private Vector3 shootdirections;
-    private float bulletdurations;
-    void Start()
+    private TowerRuntimeData runtimeData;   // use runtime data
+    private Vector3 shootDirection;
+    private float bulletDuration;
+
+    private void Update()
     {
-        transform.localScale = Vector3.one * datas.bulletsize;
-    }
-    void Update()
-    {
-        if (bulletdurations <= 0)
+        if (bulletDuration <= 0)
         {
             gameObject.SetActive(false);
         }
         else
         {
-            bulletdurations -= Time.deltaTime;
-            transform.position += new Vector3(shootdirections.x, shootdirections.y) * datas.bulletspeed * Time.deltaTime;
+            bulletDuration -= Time.deltaTime;
+            transform.position += shootDirection * runtimeData.bulletSpeed * Time.deltaTime;
         }
     }
 
-    public void Shoot(TowerDatas data, Vector3 shootdirection)
+    // Change argument type to TowerRuntimeData
+    public void Shoot(TowerRuntimeData data, Vector3 direction)
     {
-        datas = data;
-        shootdirections = shootdirection;
-        bulletdurations = datas.bulletduration;
+        runtimeData = data;
+        shootDirection = direction.normalized;
+        bulletDuration = runtimeData.bulletDuration;
+        transform.localScale = Vector3.one * runtimeData.bulletSize;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy"))
         {
-            Enemies enemies = collision.GetComponent<Enemies>();
-            enemies.TakeDMG(datas.dmg);
+            Enemies enemy = collision.GetComponent<Enemies>();
+            if (enemy != null)
+                enemy.TakeDMG(runtimeData.dmg);
+
             gameObject.SetActive(false);
         }
     }

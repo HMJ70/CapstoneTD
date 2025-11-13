@@ -19,6 +19,7 @@ public class UI : MonoBehaviour
     [SerializeField] private TMP_Text Warning;
     [SerializeField] private TMP_Text OBJectivetext;
 
+
     [Header("Panels & Prefabs")]
     [SerializeField] private GameObject Tpanel;
     [SerializeField] private GameObject TcardPrefab;
@@ -26,6 +27,7 @@ public class UI : MonoBehaviour
     [SerializeField] private GameObject pausemenu;
     [SerializeField] private GameObject gameover;
     [SerializeField] private GameObject missioncomplete;
+
 
     [Header("Buttons")]
     [SerializeField] private Button speed1;
@@ -43,11 +45,13 @@ public class UI : MonoBehaviour
     [Header("Gameplay")]
     [SerializeField] private TowerDatas[] towers;
 
+
     private bool inGameScene = false;
     private bool isgamepaused = false;
     private List<GameObject> activeCards = new List<GameObject>();
     private Platforms currplatform;
     private bool missioncompletedsoundplayed = false;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -195,7 +199,7 @@ public class UI : MonoBehaviour
         HideTPanel();
     }
 
-    private IEnumerator ShowWarning(string message)
+    public IEnumerator ShowWarning(string message)
     {
         if (Warning == null) yield break;
         Warning.text = message;
