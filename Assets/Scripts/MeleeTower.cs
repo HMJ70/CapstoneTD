@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+
 
 public class MeleeTower : MonoBehaviour
 {
@@ -22,6 +24,7 @@ public class MeleeTower : MonoBehaviour
 
     private List<Enemies> enemiesInRange = new List<Enemies>();
 
+    public TMP_Text levelLabel;
     private void Awake()
     {
         runtimeData = new TowerRuntimeData(data); // copy template into runtime
@@ -40,6 +43,9 @@ public class MeleeTower : MonoBehaviour
 
         rangeCollider.isTrigger = true;
         rangeCollider.radius = runtimeData.range;
+
+        if (levelLabel != null)
+            levelLabel.text = $"LVL {runtimeData.level}";   
     }
 
     private void Update()
@@ -141,6 +147,9 @@ public class MeleeTower : MonoBehaviour
             StartCoroutine(UI.instance.ShowWarning(
                 $"Tower Upgraded to Level {runtimeData.level}!\n"
             ));
+
+        if (levelLabel != null)
+            levelLabel.text = $"LVL {runtimeData.level}";
     }
 
 

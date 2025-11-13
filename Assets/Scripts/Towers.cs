@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
 
 public class Towers : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Towers : MonoBehaviour
     private ObjPool bulletPool;
     private float shootTimer;
 
+    public TMP_Text levelLabel;
     [Header("Animation")]
     [SerializeField] private Animator animator;
 
@@ -41,6 +43,10 @@ public class Towers : MonoBehaviour
 
         if (animator == null)
             animator = GetComponent<Animator>();
+            
+        if (levelLabel != null)
+            levelLabel.text = $"LVL {runtimeData.level}";
+
     }
 
     private void Update()
@@ -147,6 +153,9 @@ public class Towers : MonoBehaviour
             StartCoroutine(UI.instance.ShowWarning(
                 $"Tower Upgraded to Level {runtimeData.level}!\n"
             ));
+
+        if (levelLabel != null)
+            levelLabel.text = $"LVL {runtimeData.level}";
     }
 
 }
