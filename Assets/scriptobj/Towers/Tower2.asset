@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fd011df7a228b41be97c0f25dd8f55, type: 3}
   m_Name: Tower2
   m_EditorClassIdentifier: 
-  range: 4
-  attackdelay: 0.05
-  bulletspeed: 15
-  bulletduration: 0.5
-  bulletsize: 0.5
-  dmg: 0.1
-  price: 100
+  range: 3
+  attackdelay: 0.25
+  bulletspeed: 10
+  bulletduration: 2
+  bulletsize: 1
+  dmg: 0.75
+  price: 50
   sprite: {fileID: 4953576162124852638, guid: c01842f242745f84799c4edc44f4240d, type: 3}
   prefab: {fileID: 8985160936646698667, guid: 5dd6bdaf0613cd94f984729cbd40dc7e, type: 3}
   isTackShooter: 0

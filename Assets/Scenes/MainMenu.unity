@@ -4920,9 +4920,9 @@ MonoBehaviour:
   normaltextcolor: {r: 0, g: 0, b: 0, a: 1}
   selectedtext: {r: 1, g: 1, b: 1, a: 1}
   towers:
-  - {fileID: 11400000, guid: 9b8b7e7cd2b9b324288d1b0173151ef2, type: 2}
-  - {fileID: 11400000, guid: 36e091e54e2ad004f83094a7c85e6041, type: 2}
   - {fileID: 11400000, guid: f1dc72dc3e3e4d3499355139e90732be, type: 2}
+  - {fileID: 11400000, guid: 36e091e54e2ad004f83094a7c85e6041, type: 2}
+  - {fileID: 11400000, guid: 9b8b7e7cd2b9b324288d1b0173151ef2, type: 2}
   - {fileID: 11400000, guid: 29c2e853052d6f640b0f20fc09c1a205, type: 2}
 --- !u!114 &806278474
 MonoBehaviour:
