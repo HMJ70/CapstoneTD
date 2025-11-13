@@ -2,8 +2,10 @@
 public class TowerRuntimeData
 {
     public int level = 1;
-    public int maxLevel = 3;         // max upgrade
-    public int upgradeCost = 50;     // cost per upgrade
+    public int maxLevel = 5;
+    public int upgradeCost = 50;
+
+    public float upgradeCostMultiplier = 2.0f; // increase factor per level
     public float range;
     public float attackDelay;
     public float dmg;
@@ -26,11 +28,10 @@ public class TowerRuntimeData
         if (level >= maxLevel) return;
 
         level++;
-        range *= 1.2f;          // example increase
-        dmg *= 1.5f;
-        attackDelay *= 0.9f;
-        bulletSpeed *= 1.1f;
-        bulletSize *= 1.1f;
-
+        range *= 1.05f;
+        dmg *= 1.05f;
+        attackDelay *= 0.99f;
+        bulletSpeed *= 1.01f;
+        bulletSize *= 1.01f;
     }
 }

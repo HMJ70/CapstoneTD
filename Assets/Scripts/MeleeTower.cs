@@ -114,14 +114,15 @@ public class MeleeTower : MonoBehaviour
     {
         if (runtimeData.level >= runtimeData.maxLevel)
         {
-            Debug.Log("Tower is already at max level!");
+            if (UI.instance != null)
+                StartCoroutine(UI.instance.ShowWarning("Tower is already at max level!"));
             return;
         }
 
         if (GManager.instance.loots < runtimeData.upgradeCost)
         {
-            Debug.Log("Not enough coins to upgrade!");
-            StartCoroutine(UI.instance.ShowWarning("Not Enough Coins!"));
+            if (UI.instance != null)
+                StartCoroutine(UI.instance.ShowWarning("Not Enough Coins!"));
             return;
         }
 
@@ -133,8 +134,15 @@ public class MeleeTower : MonoBehaviour
         rangeCollider.radius = runtimeData.range;
         shootTimer = runtimeData.attackDelay;
 
-        Debug.Log($"Tower upgraded to level {runtimeData.level} | DMG: {runtimeData.dmg} | Range: {runtimeData.range} | Coins left: {GManager.instance.loots}");
+        runtimeData.upgradeCost = Mathf.RoundToInt(runtimeData.upgradeCost * runtimeData.upgradeCostMultiplier);
+
+        // Show upgrade message
+        if (UI.instance != null)
+            StartCoroutine(UI.instance.ShowWarning(
+                $"Tower Upgraded to Level {runtimeData.level}!\n"
+            ));
     }
+
 
 
 
