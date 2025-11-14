@@ -205,7 +205,7 @@ public class UI : MonoBehaviour
         Warning.text = message;
         Audiomanage.instance.playwarning();
         Warning.gameObject.SetActive(true);
-        yield return new WaitForSecondsRealtime(7f);
+        yield return new WaitForSecondsRealtime(5f);
         Warning.gameObject.SetActive(false);
     }
 
