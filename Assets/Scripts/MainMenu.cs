@@ -75,7 +75,9 @@ public class MainMenu : MonoBehaviour
             }
         }
 
-        lvlmanager.instance.loadlevel(lvlmanager.instance.alllevels[0]);
+        //lvlmanager.instance.loadlevel(lvlmanager.instance.alllevels[0]);
+        SceneManager.LoadScene("Tutorial");
+
     }
 
     public void QuitGame()

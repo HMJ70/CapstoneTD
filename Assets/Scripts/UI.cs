@@ -45,6 +45,14 @@ public class UI : MonoBehaviour
     [Header("Gameplay")]
     [SerializeField] private TowerDatas[] towers;
 
+    [SerializeField]
+    private string[] tutorialScenes =
+{
+    "Tutorial",
+    "Tutorial2",
+    "Tutorial3"
+};
+
 
     private bool inGameScene = false;
     private bool isgamepaused = false;
@@ -296,9 +304,19 @@ public class UI : MonoBehaviour
         }
         else
         {
-            inGameScene = true;
-            ShowUI();
-            StartCoroutine(ShowObjective());
+            // If it's a tutorial, hide all UI
+            if (Array.Exists(tutorialScenes, t => t == scene.name))
+            {
+                inGameScene = false;
+                HideUI();
+            }
+            else
+            {
+                // Real gameplay scene
+                inGameScene = true;
+                ShowUI();
+                StartCoroutine(ShowObjective());
+            }
         }
     }
 
