@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2533184477964246928}
   - component: {fileID: 8581987910717300174}
   - component: {fileID: 8215826888020158190}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: towersprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 8687910707117078301}
   - component: {fileID: 4804288657974801197}
   - component: {fileID: 8981538217721146298}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: levellabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 3822371991813871224}
   - component: {fileID: 5816883110583341610}
   - component: {fileID: 6481247365409529203}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: tower3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

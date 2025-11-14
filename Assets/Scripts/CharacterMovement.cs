@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class CharacterMovement : MonoBehaviour
@@ -21,7 +22,7 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         // Detect mouse click
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             Vector2 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             MoveTo(clickPosition);
