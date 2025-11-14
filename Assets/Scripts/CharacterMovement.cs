@@ -27,7 +27,7 @@ public class CharacterMovement : MonoBehaviour
             MoveTo(clickPosition);
         }
 
-        // Determine direction for animation if moving
+        // Determine animation direction if moving
         if (isMoving)
         {
             Vector2 direction = (targetPosition - rb.position).normalized;
@@ -37,7 +37,6 @@ public class CharacterMovement : MonoBehaviour
                 animator.SetInteger("direction", direction.y > 0 ? 3 : 0); // Up : Down
         }
 
-        // Update animation immediately based on current movement state
         animator.SetBool("isMoving", isMoving);
     }
 
@@ -48,11 +47,11 @@ public class CharacterMovement : MonoBehaviour
             Vector2 newPosition = Vector2.MoveTowards(rb.position, targetPosition, moveSpeed * Time.fixedDeltaTime);
             rb.MovePosition(newPosition);
 
-            // Check if arrived
+            // Stop moving if reached target
             if (Vector2.Distance(rb.position, targetPosition) < 0.01f)
             {
-                rb.MovePosition(targetPosition); // Snap to exact position
-                isMoving = false; // Stop moving
+                rb.MovePosition(targetPosition);
+                isMoving = false;
 
                 // Force Idle animation immediately
                 animator.Play("idlebase"); // Replace "Idle" with your Idle clip name
@@ -60,15 +59,21 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-
     public void MoveTo(Vector2 target)
     {
         targetPosition = target;
         isMoving = true;
     }
 
-    public bool HasArrived()
+    // Stop movement if colliding with obstacles
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        return !isMoving;
+        if (collision.gameObject.layer == LayerMask.NameToLayer("wall"))
+        {
+            isMoving = false;
+
+            // Force Idle animation immediately
+            animator.Play("idlebase"); // Replace "Idle" with your Idle clip name
+        }
     }
 }
