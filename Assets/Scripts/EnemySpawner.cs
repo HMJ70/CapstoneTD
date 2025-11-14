@@ -113,7 +113,7 @@ public class EnemySpawner : MonoBehaviour
         {
             GameObject SpawnedObj = pool.GetPObj();
             SpawnedObj.transform.position = transform.position;
-            float hpmultiplier = 1f + (CountW * 0.7f); //0.5 -> 50%health increase bruh
+            float hpmultiplier = 1f + (CountW * 0.5f); //0.5 -> 50%health increase bruh
             Enemies enemies = SpawnedObj.GetComponent<Enemies>();
             enemies.Initialize(hpmultiplier);
             SpawnedObj.SetActive(true);

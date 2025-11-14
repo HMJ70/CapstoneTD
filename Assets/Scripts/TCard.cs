@@ -19,7 +19,7 @@ public class TCard : MonoBehaviour
         pricetext.text = "Price: " + data.price;
         Dmg.text = "DMG: " + data.dmg;
         range.text = "Range: " + data.range;
-        atkspeed.text = "Speed: " + data.attackdelay;
+        atkspeed.text = "ATK Delay: " + data.attackdelay;
     }
 
     public void placetower()

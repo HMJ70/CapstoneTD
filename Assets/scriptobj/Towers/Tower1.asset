@@ -16,7 +16,7 @@ MonoBehaviour:
   attackdelay: 0.05
   bulletspeed: 15
   bulletduration: 0.5
-  bulletsize: 0.5
+  bulletsize: 0.75
   dmg: 1
   price: 100
   sprite: {fileID: 8821016199925446121, guid: a2a6147b15e2e2041890b96b5f4d8808, type: 3}
